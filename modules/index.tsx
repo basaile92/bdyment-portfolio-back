@@ -4,6 +4,7 @@ import {makeExecutableSchema} from "@graphql-tools/schema";
 import {descriptionTypeDefs, descriptionResolvers} from "./description"
 import {skillsTypeDefs, skillsResolvers} from "./skills"
 import {languagesResolvers, languagesTypeDefs} from "./languages";
+import {hobbiesResolvers, hobbiesTypeDefs} from "./hobbies";
 
 const typeDefs = gql`
   scalar Time
@@ -30,8 +31,8 @@ const resolvers = {
 };
 
 const schema = makeExecutableSchema({
-  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs],
-  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers],
+  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs],
+  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers],
 });
 
 export default schema;
