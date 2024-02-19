@@ -5,6 +5,7 @@ import {descriptionTypeDefs, descriptionResolvers} from "./description"
 import {skillsTypeDefs, skillsResolvers} from "./skills"
 import {languagesResolvers, languagesTypeDefs} from "./languages";
 import {hobbiesResolvers, hobbiesTypeDefs} from "./hobbies";
+import {studiesResolvers, studiesTypeDefs} from "./studies";
 
 const typeDefs = gql`
   scalar Time
@@ -31,8 +32,8 @@ const resolvers = {
 };
 
 const schema = makeExecutableSchema({
-  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs],
-  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers],
+  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs],
+  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers],
 });
 
 export default schema;
