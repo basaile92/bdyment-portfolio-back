@@ -1,5 +1,6 @@
 import {gql} from "apollo-server-express";
 import studies from "./queries/studies";
+import studiesByYear from "./queries/studiesByYear";
 
 const studiesTypeDefs = gql`
   
@@ -15,11 +16,13 @@ const studiesTypeDefs = gql`
   
   extend type Query {
     studies: [Study]
+    studiesByYear(year: Int!): [Study]
   }
 `;
 
 const studiesResolvers = {
   Query: {
+    studiesByYear,
     studies
   }
 };
