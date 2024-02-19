@@ -3,6 +3,7 @@ import {GraphQLScalarType} from "graphql";
 import {makeExecutableSchema} from "@graphql-tools/schema";
 import {descriptionTypeDefs, descriptionResolvers} from "./description"
 import {skillsTypeDefs, skillsResolvers} from "./skills"
+import {languagesResolvers, languagesTypeDefs} from "./languages";
 
 const typeDefs = gql`
   scalar Time
@@ -29,8 +30,8 @@ const resolvers = {
 };
 
 const schema = makeExecutableSchema({
-  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs],
-  resolvers: [resolvers, descriptionResolvers, skillsResolvers],
+  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs],
+  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers],
 });
 
 export default schema;
