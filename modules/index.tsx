@@ -1,12 +1,13 @@
 import {gql} from "apollo-server-express";
 import {GraphQLScalarType} from "graphql";
 import {makeExecutableSchema} from "@graphql-tools/schema";
-import {descriptionTypeDefs, descriptionResolvers} from "./description"
-import {skillsTypeDefs, skillsResolvers} from "./skills"
+import {descriptionResolvers, descriptionTypeDefs} from "./description"
+import {skillsResolvers, skillsTypeDefs} from "./skills"
 import {languagesResolvers, languagesTypeDefs} from "./languages";
 import {hobbiesResolvers, hobbiesTypeDefs} from "./hobbies";
 import {studiesResolvers, studiesTypeDefs} from "./studies";
 import {companiesResolvers, companiesTypeDefs} from "./companies";
+import {missionsResolvers, missionsTypeDefs} from "./missions";
 
 const typeDefs = gql`
   scalar Time
@@ -33,8 +34,8 @@ const resolvers = {
 };
 
 const schema = makeExecutableSchema({
-  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs, companiesTypeDefs],
-  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers, companiesResolvers],
+  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs, companiesTypeDefs, missionsTypeDefs],
+  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers, companiesResolvers, missionsResolvers],
 });
 
 export default schema;
