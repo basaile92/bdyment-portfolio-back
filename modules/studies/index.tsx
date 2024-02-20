@@ -12,6 +12,7 @@ const studiesTypeDefs = gql`
     endYear: Int
     diploma: String
     degree: String
+    isCurrent: Boolean
   }
   
   extend type Query {

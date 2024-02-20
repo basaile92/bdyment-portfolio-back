@@ -13,7 +13,11 @@ class YearUtils {
     }
 
     static filterItemsByYear = (item: any, year: number) => {
-         return item.startYear <= year && (item.isCurrent || (item.endYear != undefined && item.endYear) >= year)
+         return item.startYear <= year && (item.isCurrent && year <= YearUtils.getCurrentYear() || (item.endYear != undefined && item.endYear) >= year)
+    }
+
+    private static getCurrentYear = () => {
+        return (((Date.now()/1000)/3600)/24)/365.25;
     }
 }
 
