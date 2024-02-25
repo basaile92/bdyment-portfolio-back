@@ -1,5 +1,5 @@
-import {gql} from "apollo-server-express";
 import description from "./queries/description";
+import {gql} from "apollo-server-lambda";
 
 const descriptionTypeDefs = gql`
   type Age {

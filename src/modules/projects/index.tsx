@@ -1,7 +1,7 @@
-import {gql} from "apollo-server-express";
 import projects from "./queries/projects";
 import projectsByYear from "./queries/projectsByYear";
 import projectsBySkill from "./queries/projectsBySkill";
+import {gql} from "apollo-server-lambda";
 
 const projectsTypeDefs = gql`
 

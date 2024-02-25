@@ -1,6 +1,6 @@
-import {gql} from "apollo-server-express";
 import companies from "./queries/companies";
 import companiesByYear from "./queries/companiesByYear";
+import {gql} from "apollo-server-lambda";
 
 const companiesTypeDefs = gql`
   

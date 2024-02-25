@@ -1,6 +1,6 @@
-import {gql} from "apollo-server-express";
 import studies from "./queries/studies";
 import studiesByYear from "./queries/studiesByYear";
+import {gql} from "apollo-server-lambda";
 
 const studiesTypeDefs = gql`
   

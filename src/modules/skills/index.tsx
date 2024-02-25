@@ -1,6 +1,6 @@
-import {gql} from "apollo-server-express";
 import skills from "./queries/skills";
 import skillsByCategory from "./queries/skillsByCategory";
+import {gql} from "apollo-server-lambda";
 
 const skillsTypeDefs = gql`
   

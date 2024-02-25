@@ -15,7 +15,7 @@ jobs:
           node-version: "20"
 
       - name: Create zip file bdyment-portfolio-back
-        run: zip -r bdyment-portfolio-back.zip .
+        run: npm install && zip -r bdyment-portfolio-back.zip .
 
       - name: Extract version
         id: extract_version

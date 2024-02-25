@@ -1,6 +1,6 @@
-import {gql} from "apollo-server-express";
 import help from "./queries/help";
 import helpByCommand from "./queries/helpByCommand";
+import {gql} from "apollo-server-lambda";
 
 const helpTypeDefs = gql`
   type Usage {

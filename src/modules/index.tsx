@@ -1,4 +1,3 @@
-import {gql} from "apollo-server-express";
 import {GraphQLScalarType} from "graphql";
 import {makeExecutableSchema} from "@graphql-tools/schema";
 import {descriptionResolvers, descriptionTypeDefs} from "./description"
@@ -10,6 +9,7 @@ import {companiesResolvers, companiesTypeDefs} from "./companies";
 import {missionsResolvers, missionsTypeDefs} from "./missions";
 import {projectsResolvers, projectsTypeDefs} from "./projects";
 import {helpResolvers, helpTypeDefs} from "./help";
+import {gql} from "apollo-server-lambda";
 
 const typeDefs = gql`
   scalar Time

@@ -1,8 +1,7 @@
-import {gql} from "apollo-server-express";
 import hobbies from "./queries/hobbies";
+import {gql} from "apollo-server-lambda";
 
 const hobbiesTypeDefs = gql`
-  
   extend type Query {
     hobbies: [String]
   }

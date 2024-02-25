@@ -1,7 +1,7 @@
 <h1>Basile Dyment's portfolio back-end index</h1>
 
 <h2>Description</h2>
-<p>This React index is the back part of Basile Dyment's portfolio.</p>
+<p>This Apollo serverless app is the back part of Basile Dyment's portfolio.</p>
 
 <h2>Command</h2>
 <p><code>help</code>: show the available usages and the description of all commands sorted alphabetically by command and by parameter.</p>
@@ -21,3 +21,6 @@
 <p><code>projects</code>: show the projects, their description, the year and the skills used sorted from most recent to older.</p>
 <p><code>projects {year}</code>: show the projects of the {year}, the description and the skills used sorted from most recent to older.</p>
 <p><code>projects {skill}</code>: show the projects of the {skill}, their description, the year and the skills used sorted from most recent to older.</p>
+
+<h2>Requirements</h2>
+<code>npm install -g serverless</code>
