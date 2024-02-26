@@ -1,8 +1,9 @@
 {
   "name": "bdyment-portfolio-back",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "main": "lambda.js",
+  "type": "module",
   "dependencies": {
     "apollo-server-lambda": "3.13.0",
     "graphql": "16.8.1"
