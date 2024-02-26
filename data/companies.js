@@ -1,10 +1,10 @@
 const companies = [
     {
         "name": "Basile Dyment",
-        "website": "https://www.bdyment.com",
+        "website": "https://bdyment.com",
         "role": "Freelance",
         "startYear": 2024,
-        "isCurrent": true
+        "endYear": 2024
     },
     {
         "name": "Datanumia",
