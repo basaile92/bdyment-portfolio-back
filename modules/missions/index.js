@@ -1,6 +1,6 @@
-import missions from "./queries/missions";
-import missionsByYear from "./queries/missionsByYear";
-import missionsBySkill from "./queries/missionsBySkill";
+import missions from "./queries/missions.js";
+import missionsByYear from "./queries/missionsByYear.js";
+import missionsBySkill from "./queries/missionsBySkill.js";
 import {gql} from "apollo-server-lambda";
 
 const missionsTypeDefs = gql`

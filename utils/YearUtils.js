@@ -1,6 +1,6 @@
 class YearUtils {
 
-     static compareItemsByStartYearAndEndYearAndIsCurrent = (item1: any, item2: any) => {
+     static compareItemsByStartYearAndEndYearAndIsCurrent = (item1, item2) => {
         if(item1.isCurrent)
             return -1
         if(item2.isCurrent)
@@ -12,11 +12,11 @@ class YearUtils {
         return endYearComparison;
     }
 
-    static filterItemsByYear = (item: any, year: number) => {
-         return item.startYear <= year && (item.isCurrent && year <= YearUtils.getCurrentYear() || (item.endYear != undefined && item.endYear >= year))
+    static filterItemsByYear = (item, year) => {
+         return item.startYear <= year && (item.isCurrent && year <= YearUtils.getCurrentYear() || (item.endYear !== undefined && item.endYear >= year))
     }
 
-    private static getCurrentYear = () => {
+    static getCurrentYear = () => {
         return new Date().getFullYear();
     }
 }

@@ -1,4 +1,4 @@
-import hobbies from "./queries/hobbies";
+import hobbies from "./queries/hobbies.js";
 import {gql} from "apollo-server-lambda";
 
 const hobbiesTypeDefs = gql`

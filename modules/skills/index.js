@@ -1,5 +1,5 @@
-import skills from "./queries/skills";
-import skillsByCategory from "./queries/skillsByCategory";
+import skills from "./queries/skills.js";
+import skillsByCategory from "./queries/skillsByCategory.js";
 import {gql} from "apollo-server-lambda";
 
 const skillsTypeDefs = gql`

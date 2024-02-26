@@ -1,5 +1,5 @@
-import help from "./queries/help";
-import helpByCommand from "./queries/helpByCommand";
+import help from "./queries/help.js";
+import helpByCommand from "./queries/helpByCommand.js";
 import {gql} from "apollo-server-lambda";
 
 const helpTypeDefs = gql`

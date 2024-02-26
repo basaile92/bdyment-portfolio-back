@@ -1,7 +1,7 @@
-import missions from "../../../data/missions";
-import YearUtils from "../../../utils/YearUtils"
+import missions from "../../../data/missions.js";
+import YearUtils from "../../../utils/YearUtils.js"
 
-export default async (root:any, { year }: any) => {
+export default async (root, { year }) => {
   return missions
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);

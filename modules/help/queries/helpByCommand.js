@@ -1,6 +1,6 @@
-import commands from "../../../data/commands";
+import commands from "../../../data/commands.js";
 
-export default async (root:any, { commandLabel }: any) => {
+export default async (root, { commandLabel }) => {
     const command = commands
         .find((cmd) =>
             cmd.command == commandLabel

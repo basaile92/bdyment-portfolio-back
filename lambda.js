@@ -1,4 +1,4 @@
-import schema from "./modules/index";
+import schema from "./modules/index.js";
 import {ApolloServer} from "apollo-server-lambda";
 
 

@@ -1,4 +1,4 @@
-import description from "./queries/description";
+import description from "./queries/description.js";
 import {gql} from "apollo-server-lambda";
 
 const descriptionTypeDefs = gql`

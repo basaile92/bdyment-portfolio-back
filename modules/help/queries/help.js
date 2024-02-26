@@ -1,4 +1,4 @@
-import commands from "../../../data/commands";
+import commands from "../../../data/commands.js";
 
 export default async () => {
     const sortedCommands = commands

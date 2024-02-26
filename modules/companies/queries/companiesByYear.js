@@ -1,7 +1,7 @@
-import companies from "../../../data/companies";
-import YearUtils from "../../../utils/YearUtils"
+import companies from "../../../data/companies.js";
+import YearUtils from "../../../utils/YearUtils.js"
 
-export default async (root:any, { year }: any) => {
+export default async (root, { year }) => {
   return companies
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);

@@ -1,6 +1,6 @@
-import projects from "./queries/projects";
-import projectsByYear from "./queries/projectsByYear";
-import projectsBySkill from "./queries/projectsBySkill";
+import projects from "./queries/projects.js";
+import projectsByYear from "./queries/projectsByYear.js";
+import projectsBySkill from "./queries/projectsBySkill.js";
 import {gql} from "apollo-server-lambda";
 
 const projectsTypeDefs = gql`

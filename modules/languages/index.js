@@ -1,4 +1,4 @@
-import languages from "./queries/languages";
+import languages from "./queries/languages.js";
 import {gql} from "apollo-server-lambda";
 
 const languagesTypeDefs = gql`

@@ -1,7 +1,7 @@
-import description from "../../../data/description";
+import description from "../../../data/description.js";
 
 
-const computeAgeFrom = (date: Date): any => {
+const computeAgeFrom = (date) => {
   const timeInMs = Date.now() - date.getTime();
   const timeInH = timeInMs / 1000 / 60 / 60;
   const timeInDay = timeInH / 24;

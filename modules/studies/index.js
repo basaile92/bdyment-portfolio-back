@@ -1,5 +1,5 @@
-import studies from "./queries/studies";
-import studiesByYear from "./queries/studiesByYear";
+import studies from "./queries/studies.js";
+import studiesByYear from "./queries/studiesByYear.js";
 import {gql} from "apollo-server-lambda";
 
 const studiesTypeDefs = gql`
