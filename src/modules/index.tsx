@@ -35,9 +35,11 @@ const resolvers = {
   },
 };
 
-const schema = makeExecutableSchema({
+const schema = {
   typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs, companiesTypeDefs, missionsTypeDefs, projectsTypeDefs, helpTypeDefs],
   resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers, companiesResolvers, missionsResolvers, projectsResolvers, helpResolvers],
-});
+  playground: true,
+  introspection: true
+};
 
 export default schema;
