@@ -1,5 +1,4 @@
 import {GraphQLScalarType} from "graphql";
-import {makeExecutableSchema} from "@graphql-tools/schema";
 import {descriptionResolvers, descriptionTypeDefs} from "./description"
 import {skillsResolvers, skillsTypeDefs} from "./skills"
 import {languagesResolvers, languagesTypeDefs} from "./languages";

@@ -1,13 +1,9 @@
 {
   "name": "bdyment-portfolio-back",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
-  "scripts": {
-    "start": "node src/lambda.ts",
-    "start:dev": "nodemon --watch src --exec ts-node src/lambda.ts"
-  },
+  "main": "lambda.ts",
   "dependencies": {
-    "@graphql-tools/schema": "10.0.2",
     "apollo-server-lambda": "3.13.0",
     "graphql": "16.8.1"
   },
