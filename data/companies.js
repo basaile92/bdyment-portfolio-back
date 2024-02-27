@@ -4,7 +4,7 @@ const companies = [
         "website": "https://bdyment.com",
         "role": "Freelance",
         "startYear": 2024,
-        "endYear": 2024
+        "isCurrent": true
     },
     {
         "name": "Datanumia",

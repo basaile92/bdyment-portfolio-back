@@ -7,7 +7,7 @@ const projectsTypeDefs = gql`
 
   type Project {
     name: String
-    website: String
+    website: [String]
     role: String
     description: String
     startYear: Int

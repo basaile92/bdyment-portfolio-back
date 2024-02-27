@@ -1,18 +1,11 @@
 {
   "name": "bdyment-portfolio-back",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": true,
   "main": "lambda.js",
   "type": "module",
   "dependencies": {
     "apollo-server-lambda": "3.13.0",
     "graphql": "16.8.1"
-  },
-  "devDependencies": {
-    "@types/graphql": "14.5.0",
-    "@types/node": "20.11.19",
-    "serverless-plugin-typescript": "2.1.5",
-    "ts-node": "10.9.2",
-    "typescript": "5.3.3"
   }
 }
