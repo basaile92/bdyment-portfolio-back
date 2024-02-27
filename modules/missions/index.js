@@ -7,7 +7,7 @@ const missionsTypeDefs = gql`
 
   type Mission {
     company: String
-    website: [String]
+    websites: [String]
     role: String
     place: String
     description: String

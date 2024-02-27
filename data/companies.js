@@ -1,14 +1,14 @@
 const companies = [
     {
         "name": "Basile Dyment",
-        "website": "https://bdyment.com",
+        "websites": "https://bdyment.com",
         "role": "Freelance",
         "startYear": 2024,
         "isCurrent": true
     },
     {
         "name": "Datanumia",
-        "website": "https://www.datanumia.com/en",
+        "websites": "https://www.datanumia.com/en",
         "role": "Full-stack developer",
         "place": "Paris, France",
         "startYear": 2023,
@@ -18,7 +18,7 @@ const companies = [
     },
     {
         "name": "Ippon Technologies",
-        "website": "https://fr.ippon.tech/",
+        "websites": "https://fr.ippon.tech/",
         "role": "Engineer study and development",
         "place": "Paris, France",
         "startYear": 2018,

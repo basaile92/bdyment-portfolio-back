@@ -1,7 +1,7 @@
 const missions = [
     {
         "company": "Datanumia",
-        "website": ["https://www.datanumia.com/en"],
+        "websites": ["https://www.datanumia.com/en"],
         "place": "Paris, France",
         "role": "Full-Stack developer",
         "description": "Development and maintenance of applications that display energy bills for customers, estimate their future expenses and optimize their energy contract to reduce costs.",
@@ -61,7 +61,7 @@ const missions = [
     },
     {
         "company": "Agregio",
-        "website": ["https://www.agregio-solutions.com/en/accueil-english/"],
+        "websites": ["https://www.agregio-solutions.com/en/accueil-english/"],
         "place": "Paris, France",
         "role": "Full-Stack developer in Lynx team",
         "description": "Applications development connecting the VPP application and Agregio’s customers:\n" +
@@ -156,7 +156,7 @@ const missions = [
     },
     {
         "company": "Agregio",
-        "website": ["https://www.agregio-solutions.com/en/accueil-english/"],
+        "websites": ["https://www.agregio-solutions.com/en/accueil-english/"],
         "place": "Paris, France",
         "role": "Full-Stack developer in VPP team",
         "description": "Development of a “connected virtual power plant” application which help to automate trading rules, execute business algorithms and control the customers energy production.",
@@ -244,7 +244,7 @@ const missions = [
     },
     {
         "company": "Orange Bank",
-        "website": ["https://www.orangebank.fr/"],
+        "websites": ["https://www.orangebank.fr/"],
         "place": "Paris, France",
         "role": "Full-Stack developer in Payment team",
         "description": "Back-end development of modules related to the Orange Bank banking application transfer part.",

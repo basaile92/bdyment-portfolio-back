@@ -1,7 +1,7 @@
 const projects = [
     {
         "name": "My portfolio",
-        "website": ["https://bdyment.com","https://github.com/basaile92/bdyment-portfolio-back","https://github.com/basaile92/bdyment-portfolio-front","https://github.com/basaile92/bdyment-portfolio-infra"],
+        "websites": ["https://bdyment.com","https://github.com/basaile92/bdyment-portfolio-back","https://github.com/basaile92/bdyment-portfolio-front","https://github.com/basaile92/bdyment-portfolio-infra"],
         "role": "Full-Stack developer",
         "description": "Development of a portfolio, based from the idea of a terminal. The goal was to work for the first time in Express JS and GraphQL. The app in production is not anymore in Express but on a lambda AWS.",
         "startYear": 2024,
@@ -56,7 +56,7 @@ const projects = [
     },
     {
         "name": "WDMAM v2",
-        "website": ["https://wdmam.org"],
+        "websites": ["https://wdmam.org"],
         "role": "Full-Stack developer",
         "description": "Development of version 2 of a web application in the field of marine geosciences. The application uses AWS services to the fullest. The front-end is in React JS and the back-end is made up of Java lambdas with the Quarkus Native framework and Python.",
         "startYear": 2023,
