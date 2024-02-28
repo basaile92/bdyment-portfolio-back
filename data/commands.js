@@ -1,5 +1,14 @@
 const commands = [
     {
+        "command": "availability",
+        "usages": [
+            {
+                "parameter": "",
+                "description": "show the Basile Dyment's date of availability."
+            }
+        ]
+    },
+    {
         "command": "help",
         "usages": [
             {

@@ -50,6 +50,14 @@ const projects = [
             {
                 name: "AWS Cloudfront",
                 category: "Ops tools"
+            },
+            {
+                name: "Github Actions",
+                category: "Ops tools"
+            },
+            {
+                name: "Git",
+                category: "Versioning tools"
             }
         ],
         "isCurrent": true
@@ -113,6 +121,14 @@ const projects = [
             {
                 name: "React",
                 category: "Back-end"
+            },
+            {
+                name: "Github Actions",
+                category: "Ops tools"
+            },
+            {
+                name: "Git",
+                category: "Versioning tools"
             }
         ],
         "isCurrent": false

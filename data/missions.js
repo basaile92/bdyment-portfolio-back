@@ -55,6 +55,10 @@ const missions = [
             {
                 name: "Hexagonal architecture",
                 category: "Software craftmanship"
+            },
+            {
+                name: "Git",
+                category: "Versioning tools"
             }
         ],
         "isCurrent": false
@@ -88,7 +92,7 @@ const missions = [
                 category: "Back-end"
             },
             {
-                name: "DynamodDB",
+                name: "DynamoDB",
                 category: "Back-end"
             },
             {
@@ -150,6 +154,14 @@ const missions = [
             {
                 name: "Hexagonal architecture",
                 category: "Software craftmanship"
+            },
+            {
+                name: "Gitlab CI",
+                category: "Ops tools"
+            },
+            {
+                name: "Git",
+                category: "Versioning tools"
             }
         ],
         "isCurrent": false
@@ -238,6 +250,10 @@ const missions = [
             {
                 name: "Service layer architecture",
                 category: "Software craftmanship"
+            },
+            {
+                name: "Git",
+                category: "Versioning tools"
             }
         ],
         "isCurrent": false
@@ -274,6 +290,10 @@ const missions = [
             {
                 name: "Jenkins",
                 category: "Ops tools"
+            },
+            {
+                name: "Git",
+                category: "Versioning tools"
             }
         ],
         "isCurrent": false

@@ -9,6 +9,10 @@ import {missionsResolvers, missionsTypeDefs} from "./missions/index.js";
 import {projectsResolvers, projectsTypeDefs} from "./projects/index.js";
 import {helpResolvers, helpTypeDefs} from "./help/index.js";
 import {gql} from "apollo-server-lambda";
+import {
+  availabilityResolvers,
+  availabilityTypeDefs
+} from "./availability/index.js";
 
 const typeDefs = gql`
   scalar Time
@@ -35,8 +39,8 @@ const resolvers = {
 };
 
 const schema = {
-  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs, companiesTypeDefs, missionsTypeDefs, projectsTypeDefs, helpTypeDefs],
-  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers, companiesResolvers, missionsResolvers, projectsResolvers, helpResolvers],
+  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs, companiesTypeDefs, missionsTypeDefs, projectsTypeDefs, helpTypeDefs, availabilityTypeDefs],
+  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers, companiesResolvers, missionsResolvers, projectsResolvers, helpResolvers, availabilityResolvers],
   playground: true,
   introspection: true
 };
