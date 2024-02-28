@@ -16,7 +16,6 @@ const computeAgeFrom = (date) => {
 
 export default async () => {
   return {
-    "photoInHTML": description.photoInHTML,
     "name": description.name,
     "age": computeAgeFrom(new Date(description.birthday)),
     "job": description.job,

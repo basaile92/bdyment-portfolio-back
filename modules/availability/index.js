@@ -4,7 +4,7 @@ import {gql} from "apollo-server-lambda";
 const availabilityTypeDefs = gql`
   
   type Availability {
-    date: date
+    date: String
   }
   
   extend type Query {
