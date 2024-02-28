@@ -9,9 +9,13 @@ const descriptionTypeDefs = gql`
   }
   
   type Description {
+    photoInHTML: String
     name: String
     age: Age
     job: String
+    linkedin: String
+    github: String
+    presentation: String
   }
 
   extend type Query {

@@ -9,6 +9,19 @@ const commands = [
         ]
     },
     {
+        "command": "certificates",
+        "usages": [
+            {
+                "parameter": "",
+                "description": "show all the certificates"
+            },
+            {
+                "parameter": "{skill}",
+                "description": "show all the certificates linked to a {skill}"
+            }
+        ]
+    },
+    {
         "command": "help",
         "usages": [
             {

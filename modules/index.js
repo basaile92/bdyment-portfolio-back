@@ -13,6 +13,10 @@ import {
   availabilityResolvers,
   availabilityTypeDefs
 } from "./availability/index.js";
+import {
+  certificatesResolvers,
+  certificatesTypeDefs
+} from "./certificates/index.js";
 
 const typeDefs = gql`
   scalar Time
@@ -39,8 +43,8 @@ const resolvers = {
 };
 
 const schema = {
-  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs, companiesTypeDefs, missionsTypeDefs, projectsTypeDefs, helpTypeDefs, availabilityTypeDefs],
-  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers, companiesResolvers, missionsResolvers, projectsResolvers, helpResolvers, availabilityResolvers],
+  typeDefs: [typeDefs, descriptionTypeDefs, skillsTypeDefs, languagesTypeDefs, hobbiesTypeDefs, studiesTypeDefs, companiesTypeDefs, missionsTypeDefs, projectsTypeDefs, helpTypeDefs, availabilityTypeDefs, certificatesTypeDefs],
+  resolvers: [resolvers, descriptionResolvers, skillsResolvers, languagesResolvers, hobbiesResolvers, studiesResolvers, companiesResolvers, missionsResolvers, projectsResolvers, helpResolvers, availabilityResolvers, certificatesResolvers],
   playground: true,
   introspection: true
 };
