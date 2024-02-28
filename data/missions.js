@@ -59,6 +59,14 @@ const missions = [
             {
                 name: "Git",
                 category: "Versioning tools"
+            },
+            {
+                name: "Scrum",
+                category: "Methodology"
+            },
+            {
+                name: "SAFe",
+                category: "Methodology"
             }
         ],
         "isCurrent": false
@@ -162,6 +170,14 @@ const missions = [
             {
                 name: "Git",
                 category: "Versioning tools"
+            },
+            {
+                name: "Scrum",
+                category: "Methodology"
+            },
+            {
+                name: "SAFe",
+                category: "Methodology"
             }
         ],
         "isCurrent": false
@@ -254,6 +270,14 @@ const missions = [
             {
                 name: "Git",
                 category: "Versioning tools"
+            },
+            {
+                name: "Scrum",
+                category: "Methodology"
+            },
+            {
+                name: "SAFe",
+                category: "Methodology"
             }
         ],
         "isCurrent": false
@@ -294,6 +318,14 @@ const missions = [
             {
                 name: "Git",
                 category: "Versioning tools"
+            },
+            {
+                name: "Scrum",
+                category: "Methodology"
+            },
+            {
+                name: "SAFe",
+                category: "Methodology"
             }
         ],
         "isCurrent": false
