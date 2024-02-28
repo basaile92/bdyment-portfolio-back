@@ -120,7 +120,7 @@ const projects = [
             },
             {
                 name: "React",
-                category: "Back-end"
+                category: "Front-end"
             },
             {
                 name: "Github Actions",
