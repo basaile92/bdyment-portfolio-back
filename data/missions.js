@@ -4,7 +4,17 @@ const missions = [
         "websites": ["https://www.datanumia.com/en"],
         "place": "Paris, France",
         "role": "Full-Stack developer",
-        "description": "Development and maintenance of applications that display energy bills for customers, estimate their future expenses and optimize their energy contract to reduce costs.",
+        "description": "In a scrum team of 3 developers, 1 tester, 1 scrum master, 1 devOps and 1 product owner. (SAFe organization)\n" +
+            "Datanumia, a subsidiary of EDF, is a company specialized in the development of digital solutions for energy management\n" +
+            "My missions:\n" +
+            "- Design, develop and maintain innovative web applications that allow customers to view their energy bills, forecast their future energy expenses and optimize their energy contracts to save money. \n" +
+            "- Participate in the creation of a new Spring boot micro-service to facilitate the mass injection of contracts into the database \n" +
+            "- Create an Angular micro-front to interact with the mass contract injection micro-service. \n" +
+            "- Redesign an old micro-service that calculates the price of contracts based on electrical and contractual data.\n" +
+            "- Integrate hexagonal architecture within the team\n" +
+            "- Support the deployment of developments up to production.\n" +
+            "- Respect good development practices, carry out unit tests, integration tests and review merge requests.\n" +
+            "- Participate in PI Planning and agile ceremonies.",
         "startYear": 2023,
         "endYear": 2024,
         "skills": [
@@ -76,10 +86,17 @@ const missions = [
         "websites": ["https://www.agregio-solutions.com/en/accueil-english/"],
         "place": "Paris, France",
         "role": "Full-Stack developer in Lynx team",
-        "description": "Applications development connecting the VPP application and Agregio’s customers:\n" +
-            "- Linux box software that performs remote reading, remote control and remote information\n" +
-            "- Gateways communicating between different types of boxes and the VPP\n" +
-            "- Web application for configuration and supervision of boxes\n",
+        "description": "In a scrum team of 3 developers, 1 scrum master and 1 product owner. (SAFe organization)\n" +
+            "Agregio, a subsidiary of EDF, is a company that offers renewable energy management solutions and electrical flexibility. \n" +
+            "The role of the Lynx team is to develop and maintain various solutions that link the connected virtual power plant application and Agregio’s customers \n" +
+            "My missions:\n" +
+            "- Design and develop a Spring-boot software in hexagonal architecture grouping various existing features in scripts. This configurable software runs on different Linux boxes and allows the uploading of measurement data or box status, control of the physical outputs of the boxes in order to transmit electrical site activations.\n" +
+            "- Develop gateways that allow communication between the boxes and the web platform of the connected virtual power plant.\n" +
+            "- Design and develop AWS lambdas (in Java Quarkus Native) for the back-end of a web application that allows monitoring and setting of the boxes.\n" +
+            "- Deploy developments up to production with AWS CDK.\n" +
+            "- Respect clean code rules, carry out unit tests, integration tests, review MRs.\n" +
+            "- Practice TDD.\n" +
+            "- Participate in PI Planning and agile ceremonies.",
         "startYear": 2021,
         "endYear": 2023,
         "skills": [
@@ -187,7 +204,14 @@ const missions = [
         "websites": ["https://www.agregio-solutions.com/en/accueil-english/"],
         "place": "Paris, France",
         "role": "Full-Stack developer in VPP team",
-        "description": "Development of a “connected virtual power plant” application which help to automate trading rules, execute business algorithms and control the customers energy production.",
+        "description": "In a scrum team of 5 developers, 1 tech lead, 1 scrum master, 1 devOps and 1 product owner. (SAFe organization)\n" +
+            "The role of the VPP team is to develop a “connected virtual power plant” application in which it is possible to automate trading rules, execute business algorithms, and control the energy production of customers. \n" +
+            "My missions:\n" +
+            "- The design and development of a self-diagnostic module that checks the connection with the web application and the proper functioning of the boxes at the customers’ premises. \n" +
+            "- The implementation of trading rules adapted to the needs of customers. \n" +
+            "- Deploy developments up to production with Jenkins \n" +
+            "- Respect for good development practices, including clean code, unit tests, integration tests, and code review. \n" +
+            "- Active participation in PI planning and the agile rituals of the team.",
         "startYear": 2019,
         "endYear": 2021,
         "skills": [
@@ -287,7 +311,12 @@ const missions = [
         "websites": ["https://www.orangebank.fr/"],
         "place": "Paris, France",
         "role": "Full-Stack developer in Payment team",
-        "description": "Back-end development of modules related to the Orange Bank banking application transfer part.",
+        "description": "In a scrum team of 5 developers, 1 tech lead, 1 scrum master and 1 product owner. (SAFe organization)\n" +
+            "Orange Bank is an online bank. In the payment team, the goal is to develop features related to different types of payment \n" +
+            "My missions:\n" +
+            "- Back-end development of modules related to the transfer part of the Orange Bank banking application \n" +
+            "- Respect for clean code rules, carrying out unit tests, integration tests, and code review. \n" +
+            "- Participation in PI Planning and agile ceremonies.",
         "startYear": 2018,
         "endYear": 2019,
         "skills": [

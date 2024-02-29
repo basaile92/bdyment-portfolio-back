@@ -3,7 +3,11 @@ const projects = [
         "name": "My portfolio",
         "websites": ["https://bdyment.com","https://github.com/basaile92/bdyment-portfolio-back","https://github.com/basaile92/bdyment-portfolio-front","https://github.com/basaile92/bdyment-portfolio-infra"],
         "role": "Full-Stack developer",
-        "description": "Development of a portfolio, based from the idea of a terminal. The goal was to work for the first time in Express JS and GraphQL. The app in production is not anymore in Express but on a lambda AWS.",
+        "description": "Independent development of a portfolio, which displays my various professional information based on commands. The code for this application is publicly available on my Github\n" +
+            "- Back-end development in JavaScript and GraphQL running on an AWS lambda executed by the request received by AWS API-Gateway. \n" +
+            "- Front-end development in React JS, hosted in an S3 bucket, distributed by Cloudfront. \n" +
+            "- Development of an infra project, grouping in AWS CDK all the AWS stack to be deployed. \n" +
+            "- Creation of Github actions script allowing to create a release for the back-end project and the front-end project and to retrieve the latest releases in the infra project in order to deploy the AWS stack and update the web application.",
         "startYear": 2024,
         "endYear": 2024,
         "skills": [
@@ -66,7 +70,11 @@ const projects = [
         "name": "WDMAM v2",
         "websites": ["https://wdmam.org"],
         "role": "Full-Stack developer",
-        "description": "Development of version 2 of a web application in the field of marine geosciences. The application uses AWS services to the fullest. The front-end is in React JS and the back-end is made up of Java lambdas with the Quarkus Native framework and Python.",
+        "description": "Independent development of version 2 of a web application in the field of marine geosciences. The application allows downloading files containing magnetic anomalies aggregated by the WDMAM project.\n" +
+            "- Back-end development in Java Quarkus Native or in python of 10 AWS lambdas executed by the requests received by AWS API-Gateway and a lambda executed by the messages received on an SQS queue. The Java lambdas are developed in hexagonal architecture. \n" +
+            "- Front-end development in React JS, hosted in an S3 bucket, distributed by Cloudfront. \n" +
+            "- Development of an infra project, grouping in AWS CDK all the AWS stack to be deployed. \n" +
+            "- Creation of a Github actions script allowing to create a release for the back-end project and the front-end project and to retrieve the latest releases in the infra project in order to deploy the AWS stack and update the web application.",
         "startYear": 2023,
         "endYear": 2023,
         "skills": [
