@@ -12,7 +12,7 @@ jobs:
       - name: Setup NodeJS 20
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: '20'
 
       - name: Create zip file bdyment-portfolio-back
         run: npm install && zip -r bdyment-portfolio-back.zip .
