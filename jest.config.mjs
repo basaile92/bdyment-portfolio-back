@@ -2,7 +2,7 @@ const config = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',
-  transform: {},
+  "transform": {"^.+\\.jsx?$": "babel-jest"}
 };
 
 export default config;
