@@ -1,5 +1,5 @@
-import { gql } from 'apollo-server-lambda';
-import { AbstractGraphQLElements } from './AbstractGraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { AbstractGraphQLElements } from "./AbstractGraphQLElements.js";
 
 export class LanguageGraphQLElements extends AbstractGraphQLElements {
   constructor(languagesService) {

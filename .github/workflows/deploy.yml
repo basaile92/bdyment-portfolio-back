@@ -13,6 +13,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+      - name: Run all test
+        uses: npm install && npm run test
 
       - name: Create zip file bdyment-portfolio-back
         run: npm install && zip -r bdyment-portfolio-back.zip .

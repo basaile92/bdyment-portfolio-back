@@ -1,14 +1,14 @@
 [
   {
     "name": "Basile Dyment",
-    "websites": "https://bdyment.com",
+    "website": "https://bdyment.com",
     "role": "Freelance",
     "startYear": 2024,
     "isCurrent": true
   },
   {
     "name": "Datanumia",
-    "websites": "https://www.datanumia.com/en",
+    "website": "https://www.datanumia.com/en",
     "role": "Full-stack developer",
     "place": "Paris, France",
     "startYear": 2023,
@@ -18,7 +18,7 @@
   },
   {
     "name": "Ippon Technologies",
-    "websites": "https://fr.ippon.tech/",
+    "website": "https://fr.ippon.tech/",
     "role": "Engineer study and development",
     "place": "Paris, France",
     "startYear": 2018,

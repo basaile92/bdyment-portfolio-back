@@ -1,13 +1,13 @@
-import * as availability from '../../data/availability.json';
-import * as certificates from '../../data/certificates.json';
-import * as commands from '../../data/commands.json';
-import * as companies from '../../data/companies.json';
-import * as description from '../../data/description.json';
-import * as hobbies from '../../data/hobbies.json';
-import * as languages from '../../data/languages.json';
-import * as missions from '../../data/missions.json';
-import * as projects from '../../data/projects.json';
-import * as studies from '../../data/studies.json';
+import availability from "../../data/availability.json";
+import certificates from "../../data/certificates.json";
+import commands from "../../data/commands.json";
+import companies from "../../data/companies.json";
+import description from "../../data/description.json";
+import hobbies from "../../data/hobbies.json";
+import languages from "../../data/languages.json";
+import missions from "../../data/missions.json";
+import projects from "../../data/projects.json";
+import studies from "../../data/studies.json";
 
 export class DataClient {
   getAvailability = () => availability;
