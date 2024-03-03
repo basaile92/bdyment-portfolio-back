@@ -31,9 +31,9 @@ describe('getDescription', () => {
     let expected = {
       name: DESCRIPTION.name,
       age: {
-        timeInHour: 8783,
+        timeInHour: 8760,
         timeInDay: 365,
-        timeInYear: 1,
+        timeInYear: 0,
       },
       job: DESCRIPTION.job,
       linkedin: DESCRIPTION.linkedin,
