@@ -1,5 +1,5 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { YearUtils } from "./YearUtils.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { YearUtils } from './YearUtils.js';
 
 describe('compareItemsByYear', () => {
   test('should return positive value', () => {

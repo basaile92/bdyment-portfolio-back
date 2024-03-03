@@ -1,6 +1,6 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { DataClient } from "../client/DataClient.js";
-import { LanguageService } from "./LanguageService.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { DataClient } from '../client/DataClient.js';
+import { LanguageService } from './LanguageService.js';
 
 const LANGUAGE_1 = {
   name: 'name1',

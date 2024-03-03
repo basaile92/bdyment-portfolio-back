@@ -1,6 +1,6 @@
-import { afterAll, beforeAll, describe, expect, jest, test } from "@jest/globals";
-import { DataClient } from "../client/DataClient.js";
-import { DescriptionService } from "./DescriptionService.js";
+import { afterAll, beforeAll, describe, expect, jest, test } from '@jest/globals';
+import { DataClient } from '../client/DataClient.js';
+import { DescriptionService } from './DescriptionService.js';
 
 const DESCRIPTION = {
   name: 'name1',

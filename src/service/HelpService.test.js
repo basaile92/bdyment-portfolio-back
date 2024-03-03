@@ -1,6 +1,6 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { DataClient } from "../client/DataClient.js";
-import { HelpService } from "./HelpService.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { DataClient } from '../client/DataClient.js';
+import { HelpService } from './HelpService.js';
 
 const COMMAND_TO_SEARCH = 'command2';
 const COMMAND_1 = {

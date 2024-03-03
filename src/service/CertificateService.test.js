@@ -1,7 +1,7 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { YearUtils } from "../utils/YearUtils.js";
-import { DataClient } from "../client/DataClient.js";
-import { CertificateService } from "./CertificateService.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { YearUtils } from '../utils/YearUtils.js';
+import { DataClient } from '../client/DataClient.js';
+import { CertificateService } from './CertificateService.js';
 
 const SKILL_TO_SEARCH = 'skillToSearch';
 const CERTIFICATE_1 = { certifier: 'certifier1', skill: SKILL_TO_SEARCH, year: '1', link: 'link1' };

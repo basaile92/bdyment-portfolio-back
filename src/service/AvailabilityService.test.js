@@ -1,6 +1,6 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { DataClient } from "../client/DataClient.js";
-import { AvailabilityService } from "./AvailabilityService.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { DataClient } from '../client/DataClient.js';
+import { AvailabilityService } from './AvailabilityService.js';
 
 const AVAILABILITY = { date: '1992-12-29' };
 

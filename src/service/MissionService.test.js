@@ -1,7 +1,7 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { YearUtils } from "../utils/YearUtils.js";
-import { DataClient } from "../client/DataClient.js";
-import { MissionService } from "./MissionService.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { YearUtils } from '../utils/YearUtils.js';
+import { DataClient } from '../client/DataClient.js';
+import { MissionService } from './MissionService.js';
 
 const YEAR_TO_SEARCH = 2020;
 const SKILL_TO_SEARCH = 'skill00';

@@ -1,6 +1,6 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { DataClient } from "../client/DataClient.js";
-import { HobbiesService } from "./HobbiesService.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { DataClient } from '../client/DataClient.js';
+import { HobbiesService } from './HobbiesService.js';
 
 const HOBBIES = ['hobbies1', 'hobbies2', 'hobbies3'];
 

@@ -1,6 +1,6 @@
-import { describe, expect, jest, test } from "@jest/globals";
-import { DataClient } from "../client/DataClient.js";
-import { SkillService } from "./SkillService.js";
+import { describe, expect, jest, test } from '@jest/globals';
+import { DataClient } from '../client/DataClient.js';
+import { SkillService } from './SkillService.js';
 
 const YEAR_TO_SEARCH = 2020;
 const CATEGORY_TO_SEARCH = 'category00';
