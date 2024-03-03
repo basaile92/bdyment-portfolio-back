@@ -1,5 +1,6 @@
 import { gql } from 'apollo-server-lambda';
 import { AbstractGraphQLElements } from './AbstractGraphQLElements.js';
+import { GraphQLScalarType } from 'graphql';
 
 export class BaseGraphQLElements extends AbstractGraphQLElements {
   constructor() {

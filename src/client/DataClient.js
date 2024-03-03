@@ -8,6 +8,7 @@ import { languages } from '../data/languages.js';
 import { missions } from '../data/missions.js';
 import { projects } from '../data/projects.js';
 import { studies } from '../data/studies.js';
+
 export class DataClient {
   getAvailability = () => availability;
   getCertificates = () => certificates;
