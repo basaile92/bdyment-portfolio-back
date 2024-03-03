@@ -3,7 +3,5 @@ export class AvailabilityService {
     this._dataClient = dataClient;
   }
 
-  getAvailability() {
-    return this._dataClient.getAvailability();
-  }
+  getAvailability = () => this._dataClient.getAvailability();
 }
