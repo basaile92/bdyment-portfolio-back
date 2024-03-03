@@ -1,4 +1,4 @@
-export default [
+export const companies = [
   {
     name: 'Basile Dyment',
     website: 'https://bdyment.com',

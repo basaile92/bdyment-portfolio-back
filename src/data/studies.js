@@ -1,4 +1,4 @@
-export default [
+export const studies = [
   {
     label: 'Master in computer science, software development specialty',
     place: 'Lille, France',

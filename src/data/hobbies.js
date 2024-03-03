@@ -1,1 +1,1 @@
-export default ['bicycle', 'video games', 'music', 'book/comicbooks/manga'];
+export const hobbies = ['bicycle', 'video games', 'music', 'book/comicbooks/manga'];

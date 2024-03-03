@@ -1,4 +1,4 @@
-export default [
+export const missions = [
   {
     company: 'Datanumia',
     websites: ['https://www.datanumia.com/en'],
