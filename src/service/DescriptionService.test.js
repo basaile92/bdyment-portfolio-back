@@ -18,7 +18,7 @@ descriptionService = new DescriptionService(dataClient);
 
 beforeAll(() => {
   jest.useFakeTimers();
-  jest.setSystemTime(new Date(1993, 11, 30));
+  jest.setSystemTime(new Date(1993, 11, 29));
 });
 
 afterAll(() => {
