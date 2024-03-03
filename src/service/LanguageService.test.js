@@ -1,4 +1,4 @@
-import { describe, expect, jest, test } from '@jest/globals';
+import { describe, expect, it, jest, test } from '@jest/globals';
 import { DataClient } from '../client/DataClient.js';
 import { LanguageService } from './LanguageService.js';
 
@@ -23,9 +23,9 @@ jest.spyOn(dataClient, 'getLanguages').mockImplementation(() => LANGUAGES);
 languageService = new LanguageService(dataClient);
 
 describe('getLanguages', () => {
-  test('should return all existing languages', () => {
+  it('should return all existing languages', async () => {
     let expected = LANGUAGES;
-    let result = languageService.getLanguages();
+    let result = await languageService.getLanguages();
     expect(result).toEqual(expected);
   });
 });

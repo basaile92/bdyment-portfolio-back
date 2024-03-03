@@ -1,4 +1,4 @@
-import { describe, expect, jest, test } from '@jest/globals';
+import { describe, expect, it, jest, test } from '@jest/globals';
 import { YearUtils } from '../utils/YearUtils.js';
 import { DataClient } from '../client/DataClient.js';
 import { StudyService } from './StudyService.js';
@@ -34,18 +34,18 @@ filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementatio
 studyService = new StudyService(dataClient);
 
 describe('getStudies', () => {
-  test('should return all existing studies in the right order', () => {
+  it('should return all existing studies in the right order', async () => {
     let expected = STUDIES;
-    let result = studyService.getStudies();
+    let result = await studyService.getStudies();
     expect(result).toEqual(expected);
   });
 });
 
 describe('getStudiesByYear', () => {
-  test('should return all the studies by year in the right order', () => {
+  it('should return all the studies by year in the right order', async () => {
     let year = YEAR_TO_SEARCH;
     let expected = STUDIES;
-    let result = studyService.getStudiesByYear({}, { year });
+    let result = await studyService.getStudiesByYear({}, { year });
     expect(result).toEqual(expected);
   });
 });

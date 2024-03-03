@@ -1,4 +1,4 @@
-import { describe, expect, jest, test } from '@jest/globals';
+import { describe, expect, it, jest, test } from '@jest/globals';
 import { DataClient } from '../client/DataClient.js';
 import { HelpService } from './HelpService.js';
 
@@ -47,24 +47,24 @@ jest.spyOn(dataClient, 'getCommands').mockImplementation(() => COMMANDS);
 helpService = new HelpService(dataClient);
 
 describe('getHelp', () => {
-  test('should return all existing commands in alphabetical order', () => {
+  it('should return all existing commands in alphabetical order', async () => {
     let expected = [COMMAND_3, COMMAND_1, COMMAND_2];
-    let result = helpService.getHelp();
+    let result = await helpService.getHelp();
     expect(result).toEqual(expected);
   });
 });
 
 describe('getHelpByCommand', () => {
-  test('should return all the companies', () => {
+  it('should return all the companies', async () => {
     let commandLabel = COMMAND_TO_SEARCH;
     let expected = COMMAND_1;
-    let result = helpService.getHelpByCommand({}, { commandLabel });
+    let result = await helpService.getHelpByCommand({}, { commandLabel });
     expect(result).toEqual(expected);
   });
 
-  test('should return null', () => {
+  it('should return null', async () => {
     let unknownCommandLabel = 'unknown';
-    let result = helpService.getHelpByCommand({}, { unknownCommandLabel });
+    let result = await helpService.getHelpByCommand({}, { unknownCommandLabel });
     expect(result).toBeUndefined();
   });
 });

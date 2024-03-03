@@ -1,4 +1,4 @@
-import { describe, expect, jest, test } from '@jest/globals';
+import { describe, expect, it, jest, test } from '@jest/globals';
 import { DataClient } from '../client/DataClient.js';
 import { HobbiesService } from './HobbiesService.js';
 
@@ -10,9 +10,9 @@ jest.spyOn(dataClient, 'getHobbies').mockImplementation(() => HOBBIES);
 hobbiesService = new HobbiesService(dataClient);
 
 describe('getHobbies', () => {
-  test('should return all existing hobbies', () => {
+  it('should return all existing hobbies', async () => {
     let expected = HOBBIES;
-    let result = hobbiesService.getHobbies();
+    let result = await hobbiesService.getHobbies();
     expect(result).toEqual(expected);
   });
 });

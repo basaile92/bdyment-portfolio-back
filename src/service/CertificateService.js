@@ -5,12 +5,12 @@ export class CertificateService {
     this._dataClient = dataClient;
   }
 
-  getCertificates() {
+  async getCertificates() {
     return this._dataClient.getCertificates();
   }
 
-  getCertificatesBySkill(root, { skill }) {
-    return this.getCertificates()
+  async getCertificatesBySkill(root, { skill }) {
+    return (await this.getCertificates())
       .filter((certificate) => certificate.skill === skill)
       .sort(YearUtils.compareItemsByYear);
   }

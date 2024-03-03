@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, jest, test } from '@jest/globals';
+import { afterAll, beforeAll, describe, expect, it, jest, test } from '@jest/globals';
 import { DataClient } from '../client/DataClient.js';
 import { DescriptionService } from './DescriptionService.js';
 
@@ -26,7 +26,7 @@ afterAll(() => {
 });
 
 describe('getDescription', () => {
-  test('should return description', () => {
+  it('should return description', async () => {
     // GIVEN
     let expected = {
       name: DESCRIPTION.name,
@@ -41,7 +41,7 @@ describe('getDescription', () => {
       presentation: DESCRIPTION.presentation,
     };
     // WHEN
-    let result = descriptionService.getDescription();
+    let result = await descriptionService.getDescription();
     // THEN
     expect(result).toEqual(expected);
   });

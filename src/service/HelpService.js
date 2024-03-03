@@ -3,7 +3,7 @@ export class HelpService {
     this._dataClient = dataClient;
   }
 
-  getHelp() {
+  async getHelp() {
     const sortedCommands = this._dataClient
       .getCommands()
       .sort((command1, command2) => command1.command.localeCompare(command2.command));
@@ -13,8 +13,8 @@ export class HelpService {
     return sortedCommands;
   }
 
-  getHelpByCommand(root, { commandLabel }) {
-    const command = this.getHelp().find((cmd) => cmd.command === commandLabel);
+  async getHelpByCommand(root, { commandLabel }) {
+    const command = (await this.getHelp()).find((cmd) => cmd.command === commandLabel);
     if (command) {
       command.usages.sort((usage1, usage2) => usage1.parameter.localeCompare(usage2.parameter));
     }

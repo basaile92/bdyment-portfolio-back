@@ -5,12 +5,12 @@ export class StudyService {
     this._dataClient = dataClient;
   }
 
-  getStudies() {
+  async getStudies() {
     return this._dataClient.getStudies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
 
-  getStudiesByYear(root, { year }) {
-    return this.getStudies()
+  async getStudiesByYear(root, { year }) {
+    return (await this.getStudies())
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }

@@ -3,7 +3,7 @@ export class AvailabilityService {
     this._dataClient = dataClient;
   }
 
-  getAvailability() {
+  async getAvailability() {
     return this._dataClient.getAvailability();
   }
 }

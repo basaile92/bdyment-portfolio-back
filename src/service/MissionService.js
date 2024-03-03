@@ -5,18 +5,18 @@ export class MissionService {
     this._dataClient = dataClient;
   }
 
-  getMissions() {
+  async getMissions() {
     return this._dataClient.getMissions().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
 
-  getMissionsBySkill(root, { skillName }) {
-    return this.getMissions()
+  async getMissionsBySkill(root, { skillName }) {
+    return (await this.getMissions())
       .filter((item) => item.skills.find((skill) => skill.name === skillName))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
 
-  getMissionsByYear(root, { year }) {
-    return this.getMissions()
+  async getMissionsByYear(root, { year }) {
+    return (await this.getMissions())
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
