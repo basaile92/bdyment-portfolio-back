@@ -26,6 +26,7 @@ import { StudyService } from './src/service/StudyService.js';
 import { SkillService } from './src/service/SkillService.js';
 
 const dataClient = new DataClient();
+console.log(dataClient.getAvailability());
 const baseGraphQLElements = new BaseGraphQLElements();
 const availabilityGraphQLElements = new AvailabilityGraphQLElements(new AvailabilityService(dataClient));
 const certificateGraphQLElements = new CertificateGraphQLElements(new CertificateService(dataClient));

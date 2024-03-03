@@ -10,7 +10,10 @@ import projects from '../../data/projects.json' with { type: 'json' };
 import studies from '../../data/studies.json' with { type: 'json' };
 
 export class DataClient {
-  getAvailability = () => availability;
+  getAvailability = () => {
+    console.log(availability);
+    return availability;
+  };
   getCertificates = () => certificates;
   getCommands = () => commands;
   getCompanies = () => companies;
