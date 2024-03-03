@@ -3,7 +3,7 @@ export class LanguageService {
     this._dataClient = dataClient;
   }
 
-  async getLanguages() {
-    return await this._dataClient.getLanguages();
+  getLanguages() {
+    return this._dataClient.getLanguages();
   }
 }

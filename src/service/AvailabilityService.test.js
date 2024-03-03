@@ -1,4 +1,4 @@
-import { describe, expect, it, jest } from '@jest/globals';
+import { describe, expect, jest, test } from '@jest/globals';
 import { DataClient } from '../client/DataClient.js';
 import { AvailabilityService } from './AvailabilityService.js';
 
@@ -10,9 +10,9 @@ jest.spyOn(dataClient, 'getAvailability').mockImplementation(() => AVAILABILITY)
 availabilityService = new AvailabilityService(dataClient);
 
 describe('getAvailability', () => {
-  it('should return availability', async () => {
+  test('should return availability', () => {
     let expected = AVAILABILITY;
-    let result = await availabilityService.getAvailability();
+    let result = availabilityService.getAvailability();
     expect(result).toEqual(expected);
   });
 });

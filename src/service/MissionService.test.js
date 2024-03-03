@@ -1,4 +1,4 @@
-import { describe, expect, it, jest, test } from '@jest/globals';
+import { describe, expect, jest, test } from '@jest/globals';
 import { YearUtils } from '../utils/YearUtils.js';
 import { DataClient } from '../client/DataClient.js';
 import { MissionService } from './MissionService.js';
@@ -87,27 +87,27 @@ filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementatio
 missionService = new MissionService(dataClient);
 
 describe('getMissions', () => {
-  it('should return all existing missions in the right order', async () => {
+  test('should return all existing missions in the right order', () => {
     let expected = MISSIONS;
-    let result = await missionService.getMissions();
+    let result = missionService.getMissions();
     expect(result).toEqual(expected);
   });
 });
 
 describe('getMissionsBySkill', () => {
-  it('should return all the missions by skill in the right order', async () => {
+  test('should return all the missions by skill in the right order', () => {
     let skillName = SKILL_TO_SEARCH;
     let expected = [MISSION_1, MISSION_2];
-    let result = await missionService.getMissionsBySkill({}, { skillName });
+    let result = missionService.getMissionsBySkill({}, { skillName });
     expect(result).toEqual(expected);
   });
 });
 
 describe('getMissionsByYear', () => {
-  it('should return all the missions by year in the right order', async () => {
+  test('should return all the missions by year in the right order', () => {
     let year = YEAR_TO_SEARCH;
     let expected = MISSIONS;
-    let result =await missionService.getMissionsByYear({}, { year });
+    let result = missionService.getMissionsByYear({}, { year });
     expect(result).toEqual(expected);
   });
 });

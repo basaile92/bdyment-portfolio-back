@@ -1,4 +1,4 @@
-import { describe, expect, it, jest, test } from '@jest/globals';
+import { describe, expect, jest, test } from '@jest/globals';
 import { YearUtils } from '../utils/YearUtils.js';
 import { DataClient } from '../client/DataClient.js';
 import { CertificateService } from './CertificateService.js';
@@ -16,25 +16,25 @@ compareItemsByYearSpy = jest.spyOn(YearUtils, 'compareItemsByYear').mockImplemen
 certificateService = new CertificateService(dataClient);
 
 describe('getCertificates', () => {
-  it('should return all existing certificates in the right order', async () => {
+  test('should return all existing certificates in the right order', () => {
     let expected = CERTIFICATES;
-    let result = await certificateService.getCertificates();
+    let result = certificateService.getCertificates();
     expect(result).toEqual(expected);
   });
 });
 
 describe('getCertificatesBySkill', () => {
-  it('should return the correct certificates for a given skill in the right order', async () => {
+  test('should return the correct certificates for a given skill in the right order', () => {
     let skill = SKILL_TO_SEARCH;
     let expected = [CERTIFICATE_1, CERTIFICATE_2];
-    let result = await certificateService.getCertificatesBySkill({}, { skill });
+    let result = certificateService.getCertificatesBySkill({}, { skill });
     expect(result).toEqual(expected);
   });
 
-  it('should return an empty array for an unknown skill', async () => {
+  test('should return an empty array for an unknown skill', () => {
     let skill = 'unknownSkill';
     let expected = [];
-    let result = await certificateService.getCertificatesBySkill({}, { skill });
+    let result = certificateService.getCertificatesBySkill({}, { skill });
     expect(result).toEqual(expected);
   });
 });

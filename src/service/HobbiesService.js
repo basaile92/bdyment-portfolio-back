@@ -3,7 +3,7 @@ export class HobbiesService {
     this._dataClient = dataClient;
   }
 
-  async getHobbies() {
-    return await this._dataClient.getHobbies();
+  getHobbies() {
+    return this._dataClient.getHobbies();
   }
 }

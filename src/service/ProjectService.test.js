@@ -1,4 +1,4 @@
-import { describe, expect, it, jest, test } from '@jest/globals';
+import { describe, expect, jest, test } from '@jest/globals';
 import { YearUtils } from '../utils/YearUtils.js';
 import { DataClient } from '../client/DataClient.js';
 import { ProjectService } from './ProjectService.js';
@@ -84,27 +84,27 @@ filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementatio
 projectService = new ProjectService(dataClient);
 
 describe('getProjects', () => {
-  it('should return all existing projects in the right order', async () => {
+  test('should return all existing projects in the right order', () => {
     let expected = PROJECTS;
-    let result = await projectService.getProjects();
+    let result = projectService.getProjects();
     expect(result).toEqual(expected);
   });
 });
 
 describe('getProjectsBySkill', () => {
-  it('should return all the projects by skill in the right order', async () => {
+  test('should return all the projects by skill in the right order', () => {
     let skillName = SKILL_TO_SEARCH;
     let expected = [PROJECT_1, PROJECT_2];
-    let result = await projectService.getProjectsBySkill({}, { skillName });
+    let result = projectService.getProjectsBySkill({}, { skillName });
     expect(result).toEqual(expected);
   });
 });
 
 describe('getProjectsByYear', () => {
-  it('should return all the projects by year in the right order', async () => {
+  test('should return all the projects by year in the right order', () => {
     let year = YEAR_TO_SEARCH;
     let expected = PROJECTS;
-    let result = await projectService.getProjectsByYear({}, { year });
+    let result = projectService.getProjectsByYear({}, { year });
     expect(result).toEqual(expected);
   });
 });

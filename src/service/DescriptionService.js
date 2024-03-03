@@ -3,7 +3,7 @@ export class DescriptionService {
     this._dataClient = dataClient;
   }
 
-  async getDescription() {
+  getDescription() {
     const description = this._dataClient.getDescription();
     return {
       name: description.name,

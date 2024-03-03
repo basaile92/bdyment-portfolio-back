@@ -1,4 +1,4 @@
-import { describe, expect, it, jest, test } from '@jest/globals';
+import { describe, expect, jest, test } from '@jest/globals';
 import { YearUtils } from '../utils/YearUtils.js';
 import { DataClient } from '../client/DataClient.js';
 import { CompanyService } from './CompanyService.js';
@@ -39,18 +39,18 @@ filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementatio
 companyService = new CompanyService(dataClient);
 
 describe('getCompanies', () => {
-  it('should return all existing companies in the right order', async () => {
+  test('should return all existing companies in the right order', () => {
     let expected = COMPANIES;
-    let result = await companyService.getCompanies();
+    let result = companyService.getCompanies();
     expect(result).toEqual(expected);
   });
 });
 
 describe('getCompaniesByYear', () => {
-  it('should return all the companies by year in the right order', async () => {
+  test('should return all the companies by year in the right order', () => {
     let year = YEAR_TO_SEARCH;
     let expected = COMPANIES;
-    let result = await companyService.getCompaniesByYear({}, { year });
+    let result = companyService.getCompaniesByYear({}, { year });
     expect(result).toEqual(expected);
   });
 });

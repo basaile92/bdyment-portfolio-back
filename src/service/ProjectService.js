@@ -5,18 +5,18 @@ export class ProjectService {
     this._dataClient = dataClient;
   }
 
-  async getProjects() {
+  getProjects() {
     return this._dataClient.getProjects().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
 
-  async getProjectsBySkill(root, { skillName }) {
-    return (await this.getProjects())
+  getProjectsBySkill(root, { skillName }) {
+    return this.getProjects()
       .filter((item) => item.skills.find((skill) => skill.name === skillName))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
 
-  async getProjectsByYear(root, { year }) {
-    return (await this.getProjects())
+  getProjectsByYear(root, { year }) {
+    return this.getProjects()
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }

@@ -1,4 +1,4 @@
-import { describe, expect, it, jest, test } from '@jest/globals';
+import { describe, expect, jest, test } from '@jest/globals';
 import { DataClient } from '../client/DataClient.js';
 import { SkillService } from './SkillService.js';
 
@@ -111,18 +111,18 @@ jest.spyOn(dataClient, 'getMissions').mockImplementation(() => MISSIONS);
 skillService = new SkillService(dataClient);
 
 describe('getSkills', () => {
-  it('should return all existing skills', async () => {
+  test('should return all existing skills', () => {
     let expected = [skill0, skill1, skill2, skill3, skill4, skill5, skill6, skill7];
-    let result = await skillService.getSkills();
+    let result = skillService.getSkills();
     expect(result).toEqual(expected);
   });
 });
 
 describe('getSkillsByCategory', () => {
-  it('should return all the skills by category', async () => {
+  test('should return all the skills by category', () => {
     let category = CATEGORY_TO_SEARCH;
     let expected = [skill0, skill2, skill5];
-    let result = await skillService.getSkillsByCategory({}, { category });
+    let result = skillService.getSkillsByCategory({}, { category });
     expect(result).toEqual(expected);
   });
 });

@@ -5,12 +5,12 @@ export class CompanyService {
     this._dataClient = dataClient;
   }
 
-  async getCompanies() {
+  getCompanies() {
     return this._dataClient.getCompanies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
 
-  async getCompaniesByYear(root, { year }) {
-    return (await this.getCompanies())
+  getCompaniesByYear(root, { year }) {
+    return this.getCompanies()
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   }
