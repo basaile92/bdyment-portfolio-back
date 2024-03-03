@@ -1,13 +1,12 @@
 {
   "name": "bdyment-portfolio-back",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "private": true,
   "main": "lambda",
   "type": "module",
   "scripts": {
     "test": "jest",
-    "format": "npx prettier --write .",
-    "commonJs": "npx babel ./src --out-dir ./dist --extensions \".js,.jsx\""
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "apollo-server-lambda": "3.13.0",
