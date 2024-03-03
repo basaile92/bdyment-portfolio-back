@@ -17,7 +17,7 @@ jobs:
         run: npm install && npm run test
 
       - name: Create zip file bdyment-portfolio-back
-        run: npm install && zip -r bdyment-portfolio-back.zip .
+        run: npm install && npm run commonJs && zip -r bdyment-portfolio-back.zip dist
 
       - name: Extract version
         id: extract_version
