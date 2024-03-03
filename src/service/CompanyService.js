@@ -5,13 +5,13 @@ export class CompanyService {
     this._dataClient = dataClient;
   }
 
-  getCompanies() {
+  getCompanies = () => {
     return this._dataClient.getCompanies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
-  }
+  };
 
-  getCompaniesByYear(root, { year }) {
+  getCompaniesByYear = (root, { year }) => {
     return this.getCompanies()
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
-  }
+  };
 }

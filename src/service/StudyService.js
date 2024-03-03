@@ -5,13 +5,13 @@ export class StudyService {
     this._dataClient = dataClient;
   }
 
-  getStudies() {
+  getStudies = () => {
     return this._dataClient.getStudies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
-  }
+  };
 
-  getStudiesByYear(root, { year }) {
+  getStudiesByYear = (root, { year }) => {
     return this.getStudies()
       .filter((item) => YearUtils.filterItemsByYear(item, year))
       .sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
-  }
+  };
 }

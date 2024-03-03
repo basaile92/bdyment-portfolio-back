@@ -24,11 +24,8 @@ import { SkillGraphQLElements } from './src/graphql/elements/SkillGraphQLElement
 import { StudyGraphQLElements } from './src/graphql/elements/StudyGraphQLElements.js';
 import { StudyService } from './src/service/StudyService.js';
 import { SkillService } from './src/service/SkillService.js';
-import { availability } from './src/data/availability.js';
 
 const dataClient = new DataClient();
-console.log("test" + dataClient)
-const servAv = new AvailabilityService(dataClient);
 const baseGraphQLElements = new BaseGraphQLElements();
 const availabilityGraphQLElements = new AvailabilityGraphQLElements(new AvailabilityService(dataClient));
 const certificateGraphQLElements = new CertificateGraphQLElements(new CertificateService(dataClient));
@@ -55,7 +52,6 @@ const schemaBuilder = new SchemaBuilder(
   skillGraphQLElements,
   studyGraphQLElements,
 );
-servAv.getAvailability
 
 const server = new ApolloServer(schemaBuilder.buildSchema());
 export const handler = server.createHandler();

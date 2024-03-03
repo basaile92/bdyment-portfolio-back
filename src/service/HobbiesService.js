@@ -3,7 +3,7 @@ export class HobbiesService {
     this._dataClient = dataClient;
   }
 
-  getHobbies() {
+  getHobbies = () => {
     return this._dataClient.getHobbies();
-  }
+  };
 }

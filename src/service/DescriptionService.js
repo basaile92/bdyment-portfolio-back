@@ -3,7 +3,7 @@ export class DescriptionService {
     this._dataClient = dataClient;
   }
 
-  getDescription() {
+  getDescription = () => {
     const description = this._dataClient.getDescription();
     return {
       name: description.name,
@@ -13,9 +13,9 @@ export class DescriptionService {
       github: description.github,
       presentation: description.presentation,
     };
-  }
+  };
 
-  _computeAgeFrom(date) {
+  _computeAgeFrom = (date) => {
     const timeInMs = Date.now() - date.getTime();
     const timeInH = timeInMs / 1000 / 60 / 60;
     const timeInDay = timeInH / 24;
@@ -26,5 +26,5 @@ export class DescriptionService {
       timeInDay: Math.floor(timeInDay),
       timeInYear: Math.floor(timeInYear),
     };
-  }
+  };
 }
