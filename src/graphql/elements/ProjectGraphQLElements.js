@@ -3,7 +3,7 @@ import { AbstractGraphQLElements } from './AbstractGraphQLElements.js';
 
 export class ProjectGraphQLElements extends AbstractGraphQLElements {
   constructor(projectService) {
-    const projects = projectService.getProjects();
+    const projects = projectService.getProjects;
     const projectsBySkill = projectService.getProjectsBySkill;
     const projectsByYear = projectService.getProjectsByYear;
     const projectsTypeDefs = gql`
