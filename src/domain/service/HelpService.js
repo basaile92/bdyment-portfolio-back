@@ -1,10 +1,10 @@
 export class HelpService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getHelp = () => {
-    const sortedCommands = this._portfolioDataPort
+    const sortedCommands = this._jsonPortfolioDataRetriever
       .getCommands()
       .sort((command1, command2) => command1.command.localeCompare(command2.command));
     sortedCommands.forEach((command) =>

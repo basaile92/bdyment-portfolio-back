@@ -1,7 +1,7 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { MissionService } from './MissionService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
 import { YearUtils } from '../utils/YearUtils.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const YEAR_TO_SEARCH = 2020;
 const SKILL_TO_SEARCH = 'skill00';
@@ -80,11 +80,11 @@ const MISSION_3 = {
 const MISSIONS = [MISSION_1, MISSION_2, MISSION_3];
 
 let compareItemsSpy, filterItemsByYear, missionService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getMissions').mockImplementation(() => MISSIONS);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getMissions').mockImplementation(() => MISSIONS);
 compareItemsSpy = jest.spyOn(YearUtils, 'compareItemsByStartYearAndEndYearAndIsCurrent').mockImplementation(() => 1);
 filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementation((item, year) => true);
-missionService = new MissionService(portfolioDataPort);
+missionService = new MissionService(jsonPortfolioDataRetriever);
 
 describe('getMissions', () => {
   test('should return all existing missions in the right order', () => {

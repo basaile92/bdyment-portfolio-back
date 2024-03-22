@@ -1,7 +1,7 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { CertificateService } from './CertificateService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
 import { YearUtils } from '../utils/YearUtils.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const SKILL_TO_SEARCH = 'skillToSearch';
 const CERTIFICATE_1 = { certifier: 'certifier1', skill: SKILL_TO_SEARCH, year: '1', link: 'link1' };
@@ -10,10 +10,10 @@ const CERTIFICATE_3 = { certifier: 'certifier3', skill: 'skill3', year: '3', lin
 const CERTIFICATES = [CERTIFICATE_1, CERTIFICATE_2, CERTIFICATE_3];
 
 let compareItemsByYearSpy, certificateService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getCertificates').mockImplementation(() => CERTIFICATES);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getCertificates').mockImplementation(() => CERTIFICATES);
 compareItemsByYearSpy = jest.spyOn(YearUtils, 'compareItemsByYear').mockImplementation(() => 1);
-certificateService = new CertificateService(portfolioDataPort);
+certificateService = new CertificateService(jsonPortfolioDataRetriever);
 
 describe('getCertificates', () => {
   test('should return all existing certificates in the right order', () => {

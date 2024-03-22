@@ -1,6 +1,6 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { LanguageService } from './LanguageService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const LANGUAGE_1 = {
   name: 'name1',
@@ -18,9 +18,9 @@ const LANGUAGE_3 = {
 const LANGUAGES = [LANGUAGE_1, LANGUAGE_2, LANGUAGE_3];
 
 let languageService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getLanguages').mockImplementation(() => LANGUAGES);
-languageService = new LanguageService(portfolioDataPort);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getLanguages').mockImplementation(() => LANGUAGES);
+languageService = new LanguageService(jsonPortfolioDataRetriever);
 
 describe('getLanguages', () => {
   test('should return all existing languages', () => {

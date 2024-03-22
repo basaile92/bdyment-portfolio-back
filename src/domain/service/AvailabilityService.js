@@ -1,9 +1,9 @@
 export class AvailabilityService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getAvailability = () => {
-    return this._portfolioDataPort.getAvailability();
+    return this._jsonPortfolioDataRetriever.getAvailability();
   };
 }

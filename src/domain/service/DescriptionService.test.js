@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, describe, expect, jest, test } from '@jest/globals';
 import { DescriptionService } from './DescriptionService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const DESCRIPTION = {
   name: 'name1',
@@ -12,9 +12,9 @@ const DESCRIPTION = {
 };
 
 let descriptionService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getDescription').mockImplementation(() => DESCRIPTION);
-descriptionService = new DescriptionService(portfolioDataPort);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getDescription').mockImplementation(() => DESCRIPTION);
+descriptionService = new DescriptionService(jsonPortfolioDataRetriever);
 
 beforeAll(() => {
   jest.useFakeTimers();

@@ -1,13 +1,13 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { AvailabilityService } from './AvailabilityService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const AVAILABILITY = { date: '1992-12-29' };
 
 let availabilityService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getAvailability').mockImplementation(() => AVAILABILITY);
-availabilityService = new AvailabilityService(portfolioDataPort);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getAvailability').mockImplementation(() => AVAILABILITY);
+availabilityService = new AvailabilityService(jsonPortfolioDataRetriever);
 
 describe('getAvailability', () => {
   test('should return availability', () => {

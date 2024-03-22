@@ -1,7 +1,7 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { StudyService } from './StudyService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
 import { YearUtils } from '../utils/YearUtils.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const YEAR_TO_SEARCH = 2000;
 const STUDY_1 = {
@@ -27,11 +27,11 @@ const STUDY_2 = {
 const STUDIES = [STUDY_1, STUDY_2];
 
 let compareItemsSpy, filterItemsByYear, studyService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getStudies').mockImplementation(() => STUDIES);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getStudies').mockImplementation(() => STUDIES);
 compareItemsSpy = jest.spyOn(YearUtils, 'compareItemsByStartYearAndEndYearAndIsCurrent').mockImplementation(() => 1);
 filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementation((item, year) => true);
-studyService = new StudyService(portfolioDataPort);
+studyService = new StudyService(jsonPortfolioDataRetriever);
 
 describe('getStudies', () => {
   test('should return all existing studies in the right order', () => {

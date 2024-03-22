@@ -1,12 +1,12 @@
 import { YearUtils } from '../utils/YearUtils.js';
 
 export class MissionService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getMissions = () => {
-    return this._portfolioDataPort.getMissions().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
+    return this._jsonPortfolioDataRetriever.getMissions().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   };
 
   getMissionsBySkill = (root, { skillName }) => {

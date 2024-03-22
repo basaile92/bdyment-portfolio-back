@@ -1,11 +1,11 @@
 import { YearUtils } from '../utils/YearUtils.js';
 
 export class CertificateService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
-  getCertificates = () => this._portfolioDataPort.getCertificates();
+  getCertificates = () => this._jsonPortfolioDataRetriever.getCertificates();
 
   getCertificatesBySkill = (root, { skill }) => {
     return this.getCertificates()

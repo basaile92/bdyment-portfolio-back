@@ -1,12 +1,12 @@
 import { YearUtils } from '../utils/YearUtils.js';
 
 export class CompanyService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getCompanies = () => {
-    return this._portfolioDataPort.getCompanies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
+    return this._jsonPortfolioDataRetriever.getCompanies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   };
 
   getCompaniesByYear = (root, { year }) => {

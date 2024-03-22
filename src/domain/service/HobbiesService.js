@@ -1,9 +1,9 @@
 export class HobbiesService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getHobbies = () => {
-    return this._portfolioDataPort.getHobbies();
+    return this._jsonPortfolioDataRetriever.getHobbies();
   };
 }

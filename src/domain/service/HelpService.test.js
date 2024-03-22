@@ -1,6 +1,6 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { HelpService } from './HelpService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const COMMAND_TO_SEARCH = 'command2';
 const COMMAND_1 = {
@@ -42,9 +42,9 @@ const COMMAND_3 = {
 const COMMANDS = [COMMAND_1, COMMAND_2, COMMAND_3];
 
 let helpService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getCommands').mockImplementation(() => COMMANDS);
-helpService = new HelpService(portfolioDataPort);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getCommands').mockImplementation(() => COMMANDS);
+helpService = new HelpService(jsonPortfolioDataRetriever);
 
 describe('getHelp', () => {
   test('should return all existing commands in alphabetical order', () => {

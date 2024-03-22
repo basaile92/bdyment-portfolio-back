@@ -1,7 +1,7 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { CompanyService } from './CompanyService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
 import { YearUtils } from '../utils/YearUtils.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const YEAR_TO_SEARCH = 2000;
 const COMPANY_1 = {
@@ -30,13 +30,13 @@ const COMPANY_3 = {
 const COMPANIES = [COMPANY_1, COMPANY_2, COMPANY_3];
 
 let compareItemsByYearSpy, filterItemsByYear, companyService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getCompanies').mockImplementation(() => COMPANIES);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getCompanies').mockImplementation(() => COMPANIES);
 compareItemsByYearSpy = jest
   .spyOn(YearUtils, 'compareItemsByStartYearAndEndYearAndIsCurrent')
   .mockImplementation(() => 1);
 filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementation((item, year) => true);
-companyService = new CompanyService(portfolioDataPort);
+companyService = new CompanyService(jsonPortfolioDataRetriever);
 
 describe('getCompanies', () => {
   test('should return all existing companies in the right order', () => {

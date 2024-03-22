@@ -1,6 +1,6 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { SkillService } from './SkillService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const YEAR_TO_SEARCH = 2020;
 const CATEGORY_TO_SEARCH = 'category00';
@@ -105,10 +105,10 @@ const MISSION_3 = {
 const MISSIONS = [MISSION_1, MISSION_2, MISSION_3];
 
 let skillService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getProjects').mockImplementation(() => PROJECTS);
-jest.spyOn(portfolioDataPort, 'getMissions').mockImplementation(() => MISSIONS);
-skillService = new SkillService(portfolioDataPort);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getProjects').mockImplementation(() => PROJECTS);
+jest.spyOn(jsonPortfolioDataRetriever, 'getMissions').mockImplementation(() => MISSIONS);
+skillService = new SkillService(jsonPortfolioDataRetriever);
 
 describe('getSkills', () => {
   test('should return all existing skills', () => {

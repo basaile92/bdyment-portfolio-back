@@ -1,10 +1,10 @@
 export class DescriptionService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getDescription = () => {
-    const description = this._portfolioDataPort.getDescription();
+    const description = this._jsonPortfolioDataRetriever.getDescription();
     return {
       name: description.name,
       age: this._computeAgeFrom(new Date(description.birthday)),

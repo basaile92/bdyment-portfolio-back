@@ -1,6 +1,6 @@
 {
   "name": "bdyment-portfolio-back",
-  "version": "1.0.67",
+  "version": "1.0.68",
   "private": true,
   "main": "lambda",
   "type": "module",
@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "@babel/core": "7.24.0",
-    "@babel/plugin-proposal-throw-expressions": "^7.24.1",
     "@babel/plugin-syntax-import-attributes": "7.23.3",
     "@babel/preset-env": "^7.24.0",
     "@jest/globals": "29.7.0",

@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server-lambda';
-import { JsonPortfolioDataAdapter } from './src/infrastructure/adapter/JsonPortfolioDataAdapter.js';
+import { JsonPortfolioDataRetriever } from './src/infrastructure/./retriever/JsonPortfolioDataRetriever.js';
 import { BaseGraphQLElements } from './src/application/elements/BaseGraphQLElements.js';
 import { AvailabilityGraphQLElements } from './src/application/elements/AvailabilityGraphQLElements.js';
 import { CertificateGraphQLElements } from './src/application/elements/CertificateGraphQLElements.js';
@@ -26,7 +26,7 @@ import { SkillService } from './src/domain/service/SkillService.js';
 import { StudyService } from './src/domain/service/StudyService.js';
 
 export const buildGraphQLElementsList = () => {
-  const jsonPortFolioAdapter = new JsonPortfolioDataAdapter();
+  const jsonPortFolioAdapter = new JsonPortfolioDataRetriever();
   const baseGraphQLElements = new BaseGraphQLElements();
   const availabilityGraphQLElements = new AvailabilityGraphQLElements(new AvailabilityService(jsonPortFolioAdapter));
   const certificateGraphQLElements = new CertificateGraphQLElements(new CertificateService(jsonPortFolioAdapter));
@@ -54,10 +54,6 @@ export const buildGraphQLElementsList = () => {
     studyGraphQLElements
   ]
 }
-try {
   const schemaBuilder = new SchemaBuilder(buildGraphQLElementsList());
   const server = new ApolloServer(schemaBuilder.build());
   export const handler = server.createHandler();
-} catch (error) {
-  console.log("Execution error: ", error);
-}

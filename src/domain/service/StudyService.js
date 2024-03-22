@@ -1,12 +1,12 @@
 import { YearUtils } from '../utils/YearUtils.js';
 
 export class StudyService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getStudies = () => {
-    return this._portfolioDataPort.getStudies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
+    return this._jsonPortfolioDataRetriever.getStudies().sort(YearUtils.compareItemsByStartYearAndEndYearAndIsCurrent);
   };
 
   getStudiesByYear = (root, { year }) => {

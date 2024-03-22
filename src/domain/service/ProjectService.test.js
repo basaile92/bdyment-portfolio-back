@@ -1,7 +1,7 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { ProjectService } from './ProjectService.js';
-import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
 import { YearUtils } from '../utils/YearUtils.js';
+import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
 
 const YEAR_TO_SEARCH = 2020;
 const SKILL_TO_SEARCH = 'skill00';
@@ -77,11 +77,11 @@ const PROJECT_3 = {
 const PROJECTS = [PROJECT_1, PROJECT_2, PROJECT_3];
 
 let compareItemsSpy, filterItemsByYear, projectService;
-const portfolioDataPort = new PortfolioDataPort();
-jest.spyOn(portfolioDataPort, 'getProjects').mockImplementation(() => PROJECTS);
+const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
+jest.spyOn(jsonPortfolioDataRetriever, 'getProjects').mockImplementation(() => PROJECTS);
 compareItemsSpy = jest.spyOn(YearUtils, 'compareItemsByStartYearAndEndYearAndIsCurrent').mockImplementation(() => 1);
 filterItemsByYear = jest.spyOn(YearUtils, 'filterItemsByYear').mockImplementation((item, year) => true);
-projectService = new ProjectService(portfolioDataPort);
+projectService = new ProjectService(jsonPortfolioDataRetriever);
 
 describe('getProjects', () => {
   test('should return all existing projects in the right order', () => {

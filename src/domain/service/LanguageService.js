@@ -1,9 +1,9 @@
 export class LanguageService {
-  constructor(portfolioDataPort) {
-    this._portfolioDataPort = portfolioDataPort;
+  constructor(jsonPortfolioDataRetriever) {
+    this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
   getLanguages = () => {
-    return this._portfolioDataPort.getLanguages();
+    return this._jsonPortfolioDataRetriever.getLanguages();
   };
 }
