@@ -54,7 +54,10 @@ export const buildGraphQLElementsList = () => {
     studyGraphQLElements
   ]
 }
-
-const schemaBuilder = new SchemaBuilder(buildGraphQLElementsList());
-const server = new ApolloServer(schemaBuilder.build());
-export const handler = server.createHandler();
+try {
+  const schemaBuilder = new SchemaBuilder(buildGraphQLElementsList());
+  const server = new ApolloServer(schemaBuilder.build());
+  export const handler = server.createHandler();
+} catch (error) {
+  console.log("Execution error: ", error);
+}
