@@ -1,3 +1,5 @@
+import { GraphQLElements } from "../elements/GraphQLElements.js";
+
 export class SchemaBuilder {
   constructor (
     graphQLElementsList
@@ -5,13 +7,10 @@ export class SchemaBuilder {
     this._graphQLElements = graphQLElementsList;
   }
 
-  _extractTypeDef = ([typeDef, resolver]) => typeDef;
-  _extractResolver = ([typeDef, resolver]) => resolver;
-
   build () {
     return {
-      typeDefs: this._graphQLElements.map(this._extractTypeDef),
-      resolvers: this._graphQLElements.map(this._extractResolver)
+      typeDefs: this._graphQLElements.map(GraphQLElements.typeDefs),
+      resolvers: this._graphQLElements.map(GraphQLElements.resolvers)
     };
   }
 }
