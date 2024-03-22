@@ -1,6 +1,7 @@
 import { describe, expect, jest, test } from '@jest/globals';
 import { ProjectService } from './ProjectService.js';
 import { PortfolioDataPort } from '../port/PortfolioDataPort.js';
+import { YearUtils } from '../utils/YearUtils.js';
 
 const YEAR_TO_SEARCH = 2020;
 const SKILL_TO_SEARCH = 'skill00';
