@@ -1,5 +1,5 @@
 export class AvailabilityService {
-  constructor(jsonPortfolioDataRetriever) {
+  constructor (jsonPortfolioDataRetriever) {
     this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 

@@ -1,7 +1,7 @@
-import { YearUtils } from '../utils/YearUtils.js';
+import { YearUtils } from "../utils/YearUtils.js";
 
 export class CertificateService {
-  constructor(jsonPortfolioDataRetriever) {
+  constructor (jsonPortfolioDataRetriever) {
     this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 

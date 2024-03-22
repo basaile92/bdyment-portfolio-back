@@ -1,9 +1,9 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
-import { GraphQLScalarType } from 'graphql';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
+import { GraphQLScalarType } from "graphql";
 
 export class BaseGraphQLElements extends GraphQLElements {
-  constructor() {
+  constructor () {
     const baseTypeDefs = gql`
       scalar Time
 
@@ -17,14 +17,14 @@ export class BaseGraphQLElements extends GraphQLElements {
     `;
 
     const timeScalar = new GraphQLScalarType({
-      name: 'Time',
-      description: 'Time custom scalar type',
-      serialize: (value) => value,
+      name: "Time",
+      description: "Time custom scalar type",
+      serialize: (value) => value
     });
 
     const baseResolvers = {
       Time: timeScalar,
-      Query: {},
+      Query: {}
     };
     super(baseTypeDefs, baseResolvers);
   }

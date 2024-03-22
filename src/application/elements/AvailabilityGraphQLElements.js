@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class AvailabilityGraphQLElements extends GraphQLElements {
-  constructor(availabilityService) {
+  constructor (availabilityService) {
     const availability = availabilityService.getAvailability;
     const availabilityTypeDefs = gql`
       type Availability {
@@ -15,8 +15,8 @@ export class AvailabilityGraphQLElements extends GraphQLElements {
     `;
     const availabilityResolvers = {
       Query: {
-        availability,
-      },
+        availability
+      }
     };
     super(availabilityTypeDefs, availabilityResolvers);
   }

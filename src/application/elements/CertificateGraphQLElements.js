@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class CertificateGraphQLElements extends GraphQLElements {
-  constructor(certificateService) {
+  constructor (certificateService) {
     const certificates = certificateService.getCertificates;
     const certificatesBySkill = certificateService.getCertificatesBySkill;
     const certificatesTypeDefs = gql`
@@ -21,8 +21,8 @@ export class CertificateGraphQLElements extends GraphQLElements {
     const certificatesResolvers = {
       Query: {
         certificatesBySkill,
-        certificates,
-      },
+        certificates
+      }
     };
     super(certificatesTypeDefs, certificatesResolvers);
   }

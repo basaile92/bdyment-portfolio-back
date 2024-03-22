@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class HobbiesGraphQLElements extends GraphQLElements {
-  constructor(hobbiesService) {
+  constructor (hobbiesService) {
     const hobbies = hobbiesService.getHobbies;
     const hobbiesTypeDefs = gql`
       extend type Query {
@@ -12,8 +12,8 @@ export class HobbiesGraphQLElements extends GraphQLElements {
 
     const hobbiesResolvers = {
       Query: {
-        hobbies,
-      },
+        hobbies
+      }
     };
     super(hobbiesTypeDefs, hobbiesResolvers);
   }

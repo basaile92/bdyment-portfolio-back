@@ -1,18 +1,17 @@
-import { describe, expect, jest, test } from '@jest/globals';
-import { HobbiesService } from './HobbiesService.js';
-import { JsonPortfolioDataRetriever } from '../../infrastructure/retriever/JsonPortfolioDataRetriever.js';
+import { describe, expect, jest, test } from "@jest/globals";
+import { HobbiesService } from "./HobbiesService.js";
+import { JsonPortfolioDataRetriever } from "../../infrastructure/retriever/JsonPortfolioDataRetriever.js";
 
-const HOBBIES = ['hobbies1', 'hobbies2', 'hobbies3'];
+const HOBBIES = ["hobbies1", "hobbies2", "hobbies3"];
 
-let hobbiesService;
 const jsonPortfolioDataRetriever = new JsonPortfolioDataRetriever();
-jest.spyOn(jsonPortfolioDataRetriever, 'getHobbies').mockImplementation(() => HOBBIES);
-hobbiesService = new HobbiesService(jsonPortfolioDataRetriever);
+jest.spyOn(jsonPortfolioDataRetriever, "getHobbies").mockImplementation(() => HOBBIES);
+const hobbiesService = new HobbiesService(jsonPortfolioDataRetriever);
 
-describe('getHobbies', () => {
-  test('should return all existing hobbies', () => {
-    let expected = HOBBIES;
-    let result = hobbiesService.getHobbies();
+describe("getHobbies", () => {
+  test("should return all existing hobbies", () => {
+    const expected = HOBBIES;
+    const result = hobbiesService.getHobbies();
     expect(result).toEqual(expected);
   });
 });

@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class HelpGraphQLElements extends GraphQLElements {
-  constructor(helpService) {
+  constructor (helpService) {
     const help = helpService.getHelp;
     const helpByCommand = helpService.getHelpByCommand;
     const helpTypeDefs = gql`
@@ -25,8 +25,8 @@ export class HelpGraphQLElements extends GraphQLElements {
     const helpResolvers = {
       Query: {
         helpByCommand,
-        help,
-      },
+        help
+      }
     };
     super(helpTypeDefs, helpResolvers);
   }

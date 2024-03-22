@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class MissionGraphQLElements extends GraphQLElements {
-  constructor(missionService) {
+  constructor (missionService) {
     const missions = missionService.getMissions;
     const missionsBySkill = missionService.getMissionsBySkill;
     const missionsByYear = missionService.getMissionsByYear;
@@ -30,8 +30,8 @@ export class MissionGraphQLElements extends GraphQLElements {
       Query: {
         missionsByYear,
         missionsBySkill,
-        missions,
-      },
+        missions
+      }
     };
     super(missionsTypeDefs, missionsResolvers);
   }

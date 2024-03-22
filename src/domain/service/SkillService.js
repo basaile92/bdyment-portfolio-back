@@ -1,5 +1,5 @@
 export class SkillService {
-  constructor(jsonPortfolioDataRetriever) {
+  constructor (jsonPortfolioDataRetriever) {
     this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
@@ -15,7 +15,7 @@ export class SkillService {
     const skillsMissions = this._jsonPortfolioDataRetriever.getMissions().flatMap((mission) => mission.skills);
     const allSkills = skillsProjects.concat(skillsMissions);
     return [...new Map(allSkills.map((item) => [item.name, item])).values()].filter(
-      (item) => item.category === category,
+      (item) => item.category === category
     );
   };
 }

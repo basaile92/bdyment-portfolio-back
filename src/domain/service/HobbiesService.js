@@ -1,5 +1,5 @@
 export class HobbiesService {
-  constructor(jsonPortfolioDataRetriever) {
+  constructor (jsonPortfolioDataRetriever) {
     this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 

@@ -1,5 +1,5 @@
 export class DescriptionService {
-  constructor(jsonPortfolioDataRetriever) {
+  constructor (jsonPortfolioDataRetriever) {
     this._jsonPortfolioDataRetriever = jsonPortfolioDataRetriever;
   }
 
@@ -11,7 +11,7 @@ export class DescriptionService {
       job: description.job,
       linkedin: description.linkedin,
       github: description.github,
-      presentation: description.presentation,
+      presentation: description.presentation
     };
   };
 
@@ -24,7 +24,7 @@ export class DescriptionService {
     return {
       timeInHour: Math.floor(timeInH),
       timeInDay: Math.floor(timeInDay),
-      timeInYear: Math.floor(timeInYear),
+      timeInYear: Math.floor(timeInYear)
     };
   };
 }

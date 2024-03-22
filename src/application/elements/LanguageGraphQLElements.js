@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class LanguageGraphQLElements extends GraphQLElements {
-  constructor(languagesService) {
+  constructor (languagesService) {
     const languages = languagesService.getLanguages;
     const languagesTypeDefs = gql`
       type Language {
@@ -17,8 +17,8 @@ export class LanguageGraphQLElements extends GraphQLElements {
 
     const languagesResolvers = {
       Query: {
-        languages,
-      },
+        languages
+      }
     };
     super(languagesTypeDefs, languagesResolvers);
   }

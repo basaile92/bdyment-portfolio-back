@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class SkillGraphQLElements extends GraphQLElements {
-  constructor(skillService) {
+  constructor (skillService) {
     const skills = skillService.getSkills;
     const skillsByCategory = skillService.getSkillsByCategory;
     const skillsTypeDefs = gql`
@@ -20,8 +20,8 @@ export class SkillGraphQLElements extends GraphQLElements {
     const skillsResolvers = {
       Query: {
         skillsByCategory,
-        skills,
-      },
+        skills
+      }
     };
     super(skillsTypeDefs, skillsResolvers);
   }

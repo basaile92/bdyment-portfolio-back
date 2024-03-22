@@ -1,145 +1,145 @@
 export const commands = [
   {
-    command: 'availability',
+    command: "availability",
     usages: [
       {
-        parameter: '',
-        description: "show the Basile Dyment's date of availability.",
-      },
-    ],
+        parameter: "",
+        description: "show the Basile Dyment's date of availability."
+      }
+    ]
   },
   {
-    command: 'certificates',
+    command: "certificates",
     usages: [
       {
-        parameter: '',
-        description: 'show all the certificates',
+        parameter: "",
+        description: "show all the certificates"
       },
       {
-        parameter: '{skill}',
-        description: 'show all the certificates linked to a {skill}',
-      },
-    ],
+        parameter: "{skill}",
+        description: "show all the certificates linked to a {skill}"
+      }
+    ]
   },
   {
-    command: 'help',
+    command: "help",
     usages: [
       {
-        parameter: '',
+        parameter: "",
         description:
-          'show the available usages and the description of all commands sorted alphabetically by command and by parameter.',
+          "show the available usages and the description of all commands sorted alphabetically by command and by parameter."
       },
       {
-        parameter: '{command}',
+        parameter: "{command}",
         description:
-          'show the usages, its formats and the description of the {command} sorted alphabetically by parameter.',
-      },
-    ],
+          "show the usages, its formats and the description of the {command} sorted alphabetically by parameter."
+      }
+    ]
   },
   {
-    command: 'description',
+    command: "description",
     usages: [
       {
-        parameter: '',
-        description: 'show the main description of Basile Dyment: name, age, job.',
-      },
-    ],
+        parameter: "",
+        description: "show the main description of Basile Dyment: name, age, job."
+      }
+    ]
   },
   {
-    command: 'skills',
+    command: "skills",
     usages: [
       {
-        parameter: '',
-        description: 'show all the skills by categories.',
+        parameter: "",
+        description: "show all the skills by categories."
       },
       {
-        parameter: '{category}',
-        description: 'show the skills associated to one {category}.',
-      },
-    ],
+        parameter: "{category}",
+        description: "show the skills associated to one {category}."
+      }
+    ]
   },
   {
-    command: 'languages',
+    command: "languages",
     usages: [
       {
-        parameter: '',
-        description: 'show the spoken languages and the level of each.',
-      },
-    ],
+        parameter: "",
+        description: "show the spoken languages and the level of each."
+      }
+    ]
   },
   {
-    command: 'hobbies',
+    command: "hobbies",
     usages: [
       {
-        parameter: '',
-        description: 'show the hobbies.',
-      },
-    ],
+        parameter: "",
+        description: "show the hobbies."
+      }
+    ]
   },
   {
-    command: 'studies',
+    command: "studies",
     usages: [
       {
-        parameter: '',
-        description: 'show the studies, the years and the diploma sorted from most recent to older.',
+        parameter: "",
+        description: "show the studies, the years and the diploma sorted from most recent to older."
       },
       {
-        parameter: '{year}',
-        description: 'show the studies of the {year}, the years and the diploma sorted from most recent to older.',
-      },
-    ],
+        parameter: "{year}",
+        description: "show the studies of the {year}, the years and the diploma sorted from most recent to older."
+      }
+    ]
   },
   {
-    command: 'companies',
+    command: "companies",
     usages: [
       {
-        parameter: '',
-        description: 'show the companies, the years, and their description sorted from most recent to older.',
+        parameter: "",
+        description: "show the companies, the years, and their description sorted from most recent to older."
       },
       {
-        parameter: '{year}',
-        description: 'show the companies and their description based on the {year} sorted from most recent to older.',
-      },
-    ],
+        parameter: "{year}",
+        description: "show the companies and their description based on the {year} sorted from most recent to older."
+      }
+    ]
   },
   {
-    command: 'missions',
+    command: "missions",
     usages: [
       {
-        parameter: '',
+        parameter: "",
         description:
-          'show the missions, their description, the year and the skills used sorted from most recent to older.',
+          "show the missions, their description, the year and the skills used sorted from most recent to older."
       },
       {
-        parameter: '{year}',
+        parameter: "{year}",
         description:
-          'show the missions of the {year}, the description and the skills used sorted from most recent to older.',
+          "show the missions of the {year}, the description and the skills used sorted from most recent to older."
       },
       {
-        parameter: '{skill}',
+        parameter: "{skill}",
         description:
-          'show the missions of the {skill}, their description, the year and the skills used sorted from most recent to older.',
-      },
-    ],
+          "show the missions of the {skill}, their description, the year and the skills used sorted from most recent to older."
+      }
+    ]
   },
   {
-    command: 'projects',
+    command: "projects",
     usages: [
       {
-        parameter: '',
+        parameter: "",
         description:
-          'show the projects, their description, the year and the skills used sorted from most recent to older.',
+          "show the projects, their description, the year and the skills used sorted from most recent to older."
       },
       {
-        parameter: '{year}',
+        parameter: "{year}",
         description:
-          'show the projects of the {year}, the description and the skills used sorted from most recent to older.',
+          "show the projects of the {year}, the description and the skills used sorted from most recent to older."
       },
       {
-        parameter: '{skill}',
+        parameter: "{skill}",
         description:
-          'show the projects of the {skill}, their description, the year and the skills used sorted from most recent to older.',
-      },
-    ],
-  },
+          "show the projects of the {skill}, their description, the year and the skills used sorted from most recent to older."
+      }
+    ]
+  }
 ];

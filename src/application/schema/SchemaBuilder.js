@@ -1,5 +1,5 @@
 export class SchemaBuilder {
-  constructor(
+  constructor (
     graphQLElementsList
   ) {
     this._graphQLElements = graphQLElementsList;
@@ -8,10 +8,10 @@ export class SchemaBuilder {
   _extractTypeDef = ([typeDef, resolver]) => typeDef;
   _extractResolver = ([typeDef, resolver]) => resolver;
 
-  build() {
+  build () {
     return {
       typeDefs: this._graphQLElements.map(this._extractTypeDef),
-      resolvers: this._graphQLElements.map(this._extractResolver),
-    }
+      resolvers: this._graphQLElements.map(this._extractResolver)
+    };
   }
 }

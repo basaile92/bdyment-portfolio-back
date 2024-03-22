@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class DescriptionGraphQLElements extends GraphQLElements {
-  constructor(descriptionService) {
+  constructor (descriptionService) {
     const description = descriptionService.getDescription;
     const descriptionTypeDefs = gql`
       type Age {
@@ -27,8 +27,8 @@ export class DescriptionGraphQLElements extends GraphQLElements {
 
     const descriptionResolvers = {
       Query: {
-        description,
-      },
+        description
+      }
     };
     super(descriptionTypeDefs, descriptionResolvers);
   }

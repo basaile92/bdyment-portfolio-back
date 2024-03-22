@@ -1,10 +1,10 @@
 export class GraphQLElements {
-  constructor(typeDefs, resolvers) {
+  constructor (typeDefs, resolvers) {
     this._availabilityTypeDefs = typeDefs;
     this._availabilityResolvers = resolvers;
   }
 
-  getElements() {
+  getElements () {
     return [this._availabilityTypeDefs, this._availabilityResolvers];
   }
 }

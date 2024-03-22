@@ -1,8 +1,8 @@
-import { gql } from 'apollo-server-lambda';
-import { GraphQLElements } from './GraphQLElements.js';
+import { gql } from "apollo-server-lambda";
+import { GraphQLElements } from "./GraphQLElements.js";
 
 export class ProjectGraphQLElements extends GraphQLElements {
-  constructor(projectService) {
+  constructor (projectService) {
     const projects = projectService.getProjects;
     const projectsBySkill = projectService.getProjectsBySkill;
     const projectsByYear = projectService.getProjectsByYear;
@@ -29,8 +29,8 @@ export class ProjectGraphQLElements extends GraphQLElements {
       Query: {
         projectsByYear,
         projectsBySkill,
-        projects,
-      },
+        projects
+      }
     };
     super(projectsTypeDefs, projectsResolvers);
   }
