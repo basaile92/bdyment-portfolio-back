@@ -9,8 +9,8 @@ export class SchemaBuilder {
 
   build () {
     return {
-      typeDefs: this._graphQLElements.map(element => element.typeDefs()),
-      resolvers: this._graphQLElements.map(element => element.resolvers())
+      typeDefs: this._graphQLElements.map(element => element.typeDefs),
+      resolvers: this._graphQLElements.map(element => element.resolvers)
     };
   }
 }
