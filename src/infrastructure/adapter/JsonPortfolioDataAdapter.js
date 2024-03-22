@@ -8,7 +8,7 @@ import { languages } from '../data/languages.js';
 import { missions } from '../data/missions.js';
 import { projects } from '../data/projects.js';
 import { studies } from '../data/studies.js';
-import { PortfolioDataPort } from '../../../domain/port/PortfolioDataPort.js';
+import { PortfolioDataPort } from '../../domain/port/PortfolioDataPort.js';
 
 export class JsonPortfolioDataAdapter extends PortfolioDataPort{
   getAvailability = () => availability;
