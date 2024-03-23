@@ -17,7 +17,7 @@ jobs:
         run: npm install && npm run test
 
       - name: Transpile + Create zip file bdyment-portfolio-back
-        run: npm install && npm run transpile && cp package.json dist/ && cp package-lock.json dist/ && cp node_modules dist/ && zip -r bdyment-portfolio-back.zip .
+        run: npm install && npm run transpile && cp package.json dist/ && cp package-lock.json dist/ && cp -r node_modules dist/ && zip -r bdyment-portfolio-back.zip .
 
       - name: Extract version
         id: extract_version
