@@ -8,7 +8,7 @@ export class CertificateService {
     this.portfolioDataRetrieverPort = portfolioDataRetrieverPort;
   }
 
-  getCertificates = () => this.portfolioDataRetrieverPort.getCertificates();
+  getCertificates = () => this.portfolioDataRetrieverPort.getCertificates().sort(DateUtils.compareItemsByYear);
 
   getCertificatesBySkill = (_root: any, { skill }: any) => {
     return this.getCertificates()
