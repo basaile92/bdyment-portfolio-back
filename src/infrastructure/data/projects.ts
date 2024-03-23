@@ -65,7 +65,7 @@ export const projects = [
         name: 'Git',
         category: 'Versioning tools',
       },
-    ]
+    ],
   },
   {
     name: 'WDMAM v2',

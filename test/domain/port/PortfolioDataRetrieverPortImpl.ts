@@ -10,36 +10,35 @@ import { MISSIONS } from '../data/mission';
 import { PROJECTS } from '../data/project';
 import { STUDIES } from '../data/study';
 
-export class PortfolioDataRetrieverPortImpl implements PortfolioDataRetrieverPort{
-
+export class PortfolioDataRetrieverPortImpl implements PortfolioDataRetrieverPort {
   getAvailability = () => {
-    return AVAILABILITY
+    return AVAILABILITY;
   };
   getCertificates = () => {
-    return CERTIFICATES
+    return CERTIFICATES;
   };
   getCommands = () => {
-    return COMMANDS
+    return COMMANDS;
   };
   getCompanies = () => {
-    return COMPANIES
+    return COMPANIES;
   };
   getDescription = () => {
-    return DESCRIPTION
+    return DESCRIPTION;
   };
   getHobbies = () => {
-    return HOBBIES
+    return HOBBIES;
   };
   getLanguages = () => {
-    return LANGUAGES
+    return LANGUAGES;
   };
   getMissions = () => {
-    return MISSIONS
+    return MISSIONS;
   };
   getProjects = () => {
-    return PROJECTS
+    return PROJECTS;
   };
   getStudies = () => {
-    return STUDIES
+    return STUDIES;
   };
 }

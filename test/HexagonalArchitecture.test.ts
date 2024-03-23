@@ -3,8 +3,7 @@ import { RelativePath } from 'arch-unit-ts/dist/arch-unit/core/domain/RelativePa
 import { classes, noClasses } from 'arch-unit-ts/dist/main';
 
 describe('Hexagonal Architecture Test', () => {
-  const srcProject = new TypeScriptProject(RelativePath.of('src'), "**/*.test.ts");
-
+  const srcProject = new TypeScriptProject(RelativePath.of('src'), '**/*.test.ts');
 
   describe('Domain', () => {
     it('Should not depend on outside', () => {
@@ -18,7 +17,6 @@ describe('Hexagonal Architecture Test', () => {
         .check(srcProject.allClasses());
     });
   });
-
 
   describe('Application', () => {
     it('Should not depend on infrastructure', () => {
@@ -44,4 +42,4 @@ describe('Hexagonal Architecture Test', () => {
         .check(srcProject.allClasses());
     });
   });
-})
+});

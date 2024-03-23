@@ -47,7 +47,7 @@ describe('compareItemsByStartYearAndEndYear', () => {
     expect(result).toBeLessThan(0);
   });
   test('should return 0', () => {
-    const item1 = { startYear: 1949, endYear: 1952};
+    const item1 = { startYear: 1949, endYear: 1952 };
     const item2 = { startYear: 1949, endYear: 1952 };
     const result = DateUtils.compareItemsByStartYearAndEndYear(item1, item2);
     expect(result).toEqual(0);

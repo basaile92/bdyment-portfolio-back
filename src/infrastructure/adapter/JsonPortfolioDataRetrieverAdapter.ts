@@ -10,13 +10,12 @@ import { projects } from '../data/projects';
 import { studies } from '../data/studies';
 import { PortfolioDataRetrieverPort } from '../../domain/port/PortfolioDataRetrieverPort';
 
-export class JsonPortfolioDataRetrieverAdapter implements PortfolioDataRetrieverPort{
-
+export class JsonPortfolioDataRetrieverAdapter implements PortfolioDataRetrieverPort {
   getAvailability = () => {
     return {
-      date: new Date(availability.date)
+      date: new Date(availability.date),
     };
-  }
+  };
   getCertificates = () => certificates;
   getCommands = () => commands;
   getCompanies = () => companies;
@@ -27,8 +26,8 @@ export class JsonPortfolioDataRetrieverAdapter implements PortfolioDataRetriever
       job: description.job,
       linkedin: description.linkedin,
       github: description.github,
-      presentation: description.presentation
-    }
+      presentation: description.presentation,
+    };
   };
   getHobbies = () => hobbies;
   getLanguages = () => languages;

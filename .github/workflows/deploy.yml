@@ -16,8 +16,8 @@ jobs:
       - name: Run all test
         run: npm install && npm run test
 
-      - name: Create zip file bdyment-portfolio-back
-        run: npm install && tsup && cd dist && zip -r bdyment-portfolio-back.zip .
+      - name: Transpile + Create zip file bdyment-portfolio-back
+        run: npm install && npm run transpile && cd dist && zip -r bdyment-portfolio-back.zip .
 
       - name: Extract version
         id: extract_version

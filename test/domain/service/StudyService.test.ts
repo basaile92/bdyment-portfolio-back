@@ -5,7 +5,6 @@ import { PortfolioDataRetrieverPortImpl } from '../port/PortfolioDataRetrieverPo
 import { STUDIES } from '../data/study';
 import { YEAR_TO_SEARCH } from '../data/common';
 
-
 const portfolioDataRetrieverPort = new PortfolioDataRetrieverPortImpl();
 jest.spyOn(DateUtils, 'compareItemsByStartYearAndEndYear').mockImplementation(() => 1);
 jest.spyOn(DateUtils, 'filterItemsByYear').mockImplementation((item, year) => true);

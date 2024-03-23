@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "transpile": "tsup"
   },
   "dependencies": {
     "apollo-server-lambda": "3.13.0",

@@ -3,7 +3,6 @@ import { AvailabilityService } from '../../../src/domain/service/AvailabilitySer
 import { PortfolioDataRetrieverPortImpl } from '../port/PortfolioDataRetrieverPortImpl';
 import { AVAILABILITY } from '../data/availability';
 
-
 const portfolioDataRetrieverPort = new PortfolioDataRetrieverPortImpl();
 const availabilityService = new AvailabilityService(portfolioDataRetrieverPort);
 

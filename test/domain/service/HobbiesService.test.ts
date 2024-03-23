@@ -3,7 +3,6 @@ import { HobbiesService } from '../../../src/domain/service/HobbiesService';
 import { PortfolioDataRetrieverPortImpl } from '../port/PortfolioDataRetrieverPortImpl';
 import { HOBBIES } from '../data/hobby';
 
-
 const portfolioDataRetrieverPort = new PortfolioDataRetrieverPortImpl();
 const hobbiesService = new HobbiesService(portfolioDataRetrieverPort);
 

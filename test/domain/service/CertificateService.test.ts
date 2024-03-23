@@ -5,7 +5,6 @@ import { PortfolioDataRetrieverPortImpl } from '../port/PortfolioDataRetrieverPo
 import { CERTIFICATE_1, CERTIFICATE_2, CERTIFICATES } from '../data/certificate';
 import { SKILL_TO_SEARCH } from '../data/skill';
 
-
 const portfolioDataRetrieverPort = new PortfolioDataRetrieverPortImpl();
 jest.spyOn(DateUtils, 'compareItemsByYear').mockImplementation(() => 1);
 const certificateService = new CertificateService(portfolioDataRetrieverPort);

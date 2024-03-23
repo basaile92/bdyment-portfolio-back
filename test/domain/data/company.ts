@@ -5,7 +5,7 @@ export const COMPANY_1: Company = {
   name: 'name1',
   website: 'website1',
   role: 'role1',
-  startYear: YEAR_TO_SEARCH
+  startYear: YEAR_TO_SEARCH,
 };
 export const COMPANY_2: Company = {
   name: 'name2',

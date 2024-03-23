@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server-lambda';
-import { JsonPortfolioDataRetrieverAdapter } from './src/infrastructure/./adapter/JsonPortfolioDataRetrieverAdapter';
+import { JsonPortfolioDataRetrieverAdapter } from './src/infrastructure/adapter/JsonPortfolioDataRetrieverAdapter';
 import { BaseGraphQLElements } from './src/application/elements/BaseGraphQLElements';
 import { AvailabilityGraphQLElements } from './src/application/elements/AvailabilityGraphQLElements';
 import { CertificateGraphQLElements } from './src/application/elements/CertificateGraphQLElements';

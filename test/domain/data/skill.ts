@@ -3,7 +3,6 @@ import { Skill } from '../../../src/domain/model/model';
 export const CATEGORY_TO_SEARCH = 'category00';
 export const SKILL_TO_SEARCH = 'skill00';
 
-
 export const SKILL_0: Skill = {
   name: 'skill00',
   category: CATEGORY_TO_SEARCH,
