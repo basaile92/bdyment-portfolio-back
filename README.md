@@ -1,4 +1,4 @@
-<h1>Basile Dyment's portfolio back-end index</h1>
+<h1>Basile Dyment's portfolio back-end</h1>
 
 <h2>Description</h2>
 <p>This Apollo serverless app is the back part of Basile Dyment's portfolio.</p>
@@ -21,6 +21,3 @@
 <p><code>projects</code>: show the projects, their description, the year and the skills used sorted from most recent to older.</p>
 <p><code>projects {year}</code>: show the projects of the {year}, the description and the skills used sorted from most recent to older.</p>
 <p><code>projects {skill}</code>: show the projects of the {skill}, their description, the year and the skills used sorted from most recent to older.</p>
-
-<h2>Requirements</h2>
-<code>npm install -g serverless</code>
