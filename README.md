@@ -6,6 +6,9 @@
 <h2>Command</h2>
 <p><code>help</code>: show the available usages and the description of all commands sorted alphabetically by command and by parameter.</p>
 <p><code>help {command}</code>: show the usages, its formats and the description of the {command} sorted alphabetically by parameter.</p>
+<p><code>availability</code>: show the availability date of Basile Dyment.</p>
+<p><code>certificates</code>: show the certificates of Basile Dyment.</p>
+<p><code>certificates {skill}</code>: show all the certificates linked to a {skill} of Basile Dyment.</p>
 <p><code>description</code>: show the main description of Basile Dyment: name, age, job.</p>
 <p><code>skills</code>: show all the skills by categories.</p>
 <p><code>skills {category}</code>: show the skills associate to one {category}.</p>
