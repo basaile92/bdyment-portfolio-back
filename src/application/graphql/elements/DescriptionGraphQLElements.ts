@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server-lambda';
 import { GraphQLElements } from './GraphQLElements';
-import { DescriptionService } from '../../domain/service/DescriptionService';
+import { DescriptionService } from '../../../domain/service/DescriptionService';
 
 export class DescriptionGraphQLElements extends GraphQLElements {
   constructor(descriptionService: DescriptionService) {
