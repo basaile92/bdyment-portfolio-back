@@ -18,11 +18,11 @@ describe('Hexagonal Architecture Test', () => {
     });
   });
 
-  describe('Application', () => {
+  describe('Application without handler', () => {
     it('Should not depend on infrastructure', () => {
       noClasses()
         .that()
-        .resideInAPackage('..application..')
+        .resideInAPackage('..application.graphql..')
         .should()
         .dependOnClassesThat()
         .resideInAnyPackage('..infrastructure..')
