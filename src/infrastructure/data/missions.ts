@@ -31,35 +31,35 @@ export const missions = [
       },
       {
         name: 'Jenkins',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Nomad',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Rundeck',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Datadog',
-        category: 'Monitoring tools',
+        category: 'Monitoring-tools',
       },
       {
         name: 'Kibana',
-        category: 'Monitoring tools',
+        category: 'Monitoring-tools',
       },
       {
         name: 'Clean code',
-        category: 'Software craftmanship',
+        category: 'Software-craftmanship',
       },
       {
         name: 'Hexagonal architecture',
-        category: 'Software craftmanship',
+        category: 'Software-craftmanship',
       },
       {
         name: 'Git',
-        category: 'Versioning tools',
+        category: 'Versioning-tools',
       },
       {
         name: 'Scrum',
@@ -115,11 +115,11 @@ export const missions = [
       },
       {
         name: 'AWS Cloudformation',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS IoT',
-        category: 'IoT tools',
+        category: 'IoT-tools',
       },
       {
         name: 'AWS S3',
@@ -135,39 +135,39 @@ export const missions = [
       },
       {
         name: 'AWS API-Gateway',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS CDK',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Docker',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Bash',
-        category: 'System tools',
+        category: 'System-tools',
       },
       {
         name: 'Grafana',
-        category: 'Monitoring tools',
+        category: 'Monitoring-tools',
       },
       {
         name: 'Clean code',
-        category: 'Software craftmanship',
+        category: 'Software-craftmanship',
       },
       {
         name: 'Hexagonal architecture',
-        category: 'Software craftmanship',
+        category: 'Software-craftmanship',
       },
       {
         name: 'Gitlab CI',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Git',
-        category: 'Versioning tools',
+        category: 'Versioning-tools',
       },
       {
         name: 'Scrum',
@@ -227,11 +227,11 @@ export const missions = [
       },
       {
         name: 'AWS Cloudformation',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS IoT',
-        category: 'IoT tools',
+        category: 'IoT-tools',
       },
       {
         name: 'AWS S3',
@@ -247,27 +247,27 @@ export const missions = [
       },
       {
         name: 'Bash',
-        category: 'System tools',
+        category: 'System-tools',
       },
       {
         name: 'AWS Cloudwatch',
-        category: 'Monitoring tools',
+        category: 'Monitoring-tools',
       },
       {
         name: 'Jenkins',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Clean code',
-        category: 'Software craftmanship',
+        category: 'Software-craftmanship',
       },
       {
         name: 'Service layer architecture',
-        category: 'Software craftmanship',
+        category: 'Software-craftmanship',
       },
       {
         name: 'Git',
-        category: 'Versioning tools',
+        category: 'Versioning-tools',
       },
       {
         name: 'Scrum',
@@ -311,11 +311,11 @@ export const missions = [
       },
       {
         name: 'Jenkins',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Git',
-        category: 'Versioning tools',
+        category: 'Versioning-tools',
       },
       {
         name: 'Scrum',

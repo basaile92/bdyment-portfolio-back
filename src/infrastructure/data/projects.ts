@@ -39,15 +39,15 @@ export const projects = [
       },
       {
         name: 'AWS CDK',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS API-Gateway',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS Route 53',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS S3',
@@ -55,15 +55,15 @@ export const projects = [
       },
       {
         name: 'AWS Cloudfront',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Github Actions',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Git',
-        category: 'Versioning tools',
+        category: 'Versioning-tools',
       },
     ],
   },
@@ -94,15 +94,15 @@ export const projects = [
       },
       {
         name: 'AWS CDK',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS API-Gateway',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS Route 53',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS S3',
@@ -118,7 +118,7 @@ export const projects = [
       },
       {
         name: 'AWS Cloudfront',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'AWS Cognito',
@@ -130,11 +130,11 @@ export const projects = [
       },
       {
         name: 'Github Actions',
-        category: 'Ops tools',
+        category: 'Ops-tools',
       },
       {
         name: 'Git',
-        category: 'Versioning tools',
+        category: 'Versioning-tools',
       },
     ],
   },
@@ -148,7 +148,7 @@ export const projects = [
     skills: [
       {
         name: 'Unity 3D',
-        category: 'Video-game development',
+        category: 'Videogame-development',
       },
       {
         name: 'C#',
