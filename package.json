@@ -1,6 +1,6 @@
 {
   "name": "bdyment-portfolio-back",
-  "version": "1.0.80",
+  "version": "1.0.81",
   "private": true,
   "main": "lambda",
   "type": "module",
